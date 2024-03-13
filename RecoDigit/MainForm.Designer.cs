@@ -1,6 +1,6 @@
 ﻿namespace RecoDigit
 {
-    partial class s
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,39 +29,39 @@
         private void InitializeComponent()
         {
             this.networkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawingHistoryPanel = new System.Windows.Forms.Panel();
-            this.drawingHistoryDataGrid = new System.Windows.Forms.DataGridView();
-            this.drawingHistoryClearButton = new System.Windows.Forms.Button();
-            this.drawingHistoryCopyButton = new System.Windows.Forms.Button();
             this.drawingHistoryRemoveButton = new System.Windows.Forms.Button();
+            this.drawingHistoryCopyButton = new System.Windows.Forms.Button();
+            this.drawingHistoryClearButton = new System.Windows.Forms.Button();
+            this.drawingHistoryDataGrid = new System.Windows.Forms.DataGridView();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.Prediction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drawingGroupBox = new System.Windows.Forms.GroupBox();
+            this.imageOptionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.imageOptionsExportButton = new System.Windows.Forms.Button();
+            this.imageOptionsClearButton = new System.Windows.Forms.Button();
+            this.penGroupBox = new System.Windows.Forms.GroupBox();
+            this.penSizeLabel = new System.Windows.Forms.Label();
+            this.penSizeMinusButton = new System.Windows.Forms.Button();
+            this.penSizePlusButton = new System.Windows.Forms.Button();
+            this.recognizeButton = new System.Windows.Forms.Button();
             this.drawingPictureBox = new System.Windows.Forms.PictureBox();
             this.predictionGroupBox = new System.Windows.Forms.GroupBox();
             this.predictionTextBox = new System.Windows.Forms.TextBox();
-            this.recognizeButton = new System.Windows.Forms.Button();
-            this.penGroupBox = new System.Windows.Forms.GroupBox();
-            this.penSizePlusButton = new System.Windows.Forms.Button();
-            this.penSizeMinusButton = new System.Windows.Forms.Button();
-            this.penSizeLabel = new System.Windows.Forms.Label();
-            this.imageOptionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.imageOptionsClearButton = new System.Windows.Forms.Button();
-            this.imageOptionsExportButton = new System.Windows.Forms.Button();
             this.mainMenuStrip.SuspendLayout();
             this.drawingHistoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drawingHistoryDataGrid)).BeginInit();
             this.drawingGroupBox.SuspendLayout();
+            this.imageOptionsGroupBox.SuspendLayout();
+            this.penGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drawingPictureBox)).BeginInit();
             this.predictionGroupBox.SuspendLayout();
-            this.penGroupBox.SuspendLayout();
-            this.imageOptionsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // networkToolStripMenuItem
@@ -74,6 +74,29 @@
             this.networkToolStripMenuItem.Name = "networkToolStripMenuItem";
             this.networkToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.networkToolStripMenuItem.Text = "Network";
+            // 
+            // trainToolStripMenuItem
+            // 
+            this.trainToolStripMenuItem.Name = "trainToolStripMenuItem";
+            this.trainToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.trainToolStripMenuItem.Text = "Train";
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.loadToolStripMenuItem.Text = "Load";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(97, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
             // 
             // mainMenuStrip
             // 
@@ -92,29 +115,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // trainToolStripMenuItem
-            // 
-            this.trainToolStripMenuItem.Name = "trainToolStripMenuItem";
-            this.trainToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.trainToolStripMenuItem.Text = "Train";
-            // 
-            // loadToolStripMenuItem
-            // 
-            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loadToolStripMenuItem.Text = "Load";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
             // drawingHistoryPanel
             // 
             this.drawingHistoryPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -128,6 +128,39 @@
             this.drawingHistoryPanel.Name = "drawingHistoryPanel";
             this.drawingHistoryPanel.Size = new System.Drawing.Size(255, 529);
             this.drawingHistoryPanel.TabIndex = 1;
+            // 
+            // drawingHistoryRemoveButton
+            // 
+            this.drawingHistoryRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.drawingHistoryRemoveButton.Location = new System.Drawing.Point(-2, 451);
+            this.drawingHistoryRemoveButton.Name = "drawingHistoryRemoveButton";
+            this.drawingHistoryRemoveButton.Size = new System.Drawing.Size(125, 35);
+            this.drawingHistoryRemoveButton.TabIndex = 3;
+            this.drawingHistoryRemoveButton.Text = "Remove selected";
+            this.drawingHistoryRemoveButton.UseVisualStyleBackColor = true;
+            // 
+            // drawingHistoryCopyButton
+            // 
+            this.drawingHistoryCopyButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.drawingHistoryCopyButton.Location = new System.Drawing.Point(129, 451);
+            this.drawingHistoryCopyButton.Name = "drawingHistoryCopyButton";
+            this.drawingHistoryCopyButton.Size = new System.Drawing.Size(125, 35);
+            this.drawingHistoryCopyButton.TabIndex = 2;
+            this.drawingHistoryCopyButton.Text = "Copy selected";
+            this.drawingHistoryCopyButton.UseVisualStyleBackColor = true;
+            // 
+            // drawingHistoryClearButton
+            // 
+            this.drawingHistoryClearButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.drawingHistoryClearButton.Location = new System.Drawing.Point(-2, 492);
+            this.drawingHistoryClearButton.Name = "drawingHistoryClearButton";
+            this.drawingHistoryClearButton.Size = new System.Drawing.Size(256, 36);
+            this.drawingHistoryClearButton.TabIndex = 1;
+            this.drawingHistoryClearButton.Text = "Clear History";
+            this.drawingHistoryClearButton.UseVisualStyleBackColor = true;
             // 
             // drawingHistoryDataGrid
             // 
@@ -154,39 +187,6 @@
             this.drawingHistoryDataGrid.ShowEditingIcon = false;
             this.drawingHistoryDataGrid.Size = new System.Drawing.Size(254, 445);
             this.drawingHistoryDataGrid.TabIndex = 0;
-            // 
-            // drawingHistoryClearButton
-            // 
-            this.drawingHistoryClearButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.drawingHistoryClearButton.Location = new System.Drawing.Point(-2, 492);
-            this.drawingHistoryClearButton.Name = "drawingHistoryClearButton";
-            this.drawingHistoryClearButton.Size = new System.Drawing.Size(256, 36);
-            this.drawingHistoryClearButton.TabIndex = 1;
-            this.drawingHistoryClearButton.Text = "Clear History";
-            this.drawingHistoryClearButton.UseVisualStyleBackColor = true;
-            // 
-            // drawingHistoryCopyButton
-            // 
-            this.drawingHistoryCopyButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.drawingHistoryCopyButton.Location = new System.Drawing.Point(129, 451);
-            this.drawingHistoryCopyButton.Name = "drawingHistoryCopyButton";
-            this.drawingHistoryCopyButton.Size = new System.Drawing.Size(125, 35);
-            this.drawingHistoryCopyButton.TabIndex = 2;
-            this.drawingHistoryCopyButton.Text = "Copy selected";
-            this.drawingHistoryCopyButton.UseVisualStyleBackColor = true;
-            // 
-            // drawingHistoryRemoveButton
-            // 
-            this.drawingHistoryRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.drawingHistoryRemoveButton.Location = new System.Drawing.Point(-2, 451);
-            this.drawingHistoryRemoveButton.Name = "drawingHistoryRemoveButton";
-            this.drawingHistoryRemoveButton.Size = new System.Drawing.Size(125, 35);
-            this.drawingHistoryRemoveButton.TabIndex = 3;
-            this.drawingHistoryRemoveButton.Text = "Remove selected";
-            this.drawingHistoryRemoveButton.UseVisualStyleBackColor = true;
             // 
             // Image
             // 
@@ -217,6 +217,95 @@
             this.drawingGroupBox.TabStop = false;
             this.drawingGroupBox.Text = "Draw a number!";
             // 
+            // imageOptionsGroupBox
+            // 
+            this.imageOptionsGroupBox.Controls.Add(this.imageOptionsExportButton);
+            this.imageOptionsGroupBox.Controls.Add(this.imageOptionsClearButton);
+            this.imageOptionsGroupBox.Location = new System.Drawing.Point(348, 153);
+            this.imageOptionsGroupBox.Name = "imageOptionsGroupBox";
+            this.imageOptionsGroupBox.Size = new System.Drawing.Size(296, 127);
+            this.imageOptionsGroupBox.TabIndex = 3;
+            this.imageOptionsGroupBox.TabStop = false;
+            this.imageOptionsGroupBox.Text = "Image Options";
+            // 
+            // imageOptionsExportButton
+            // 
+            this.imageOptionsExportButton.Location = new System.Drawing.Point(7, 67);
+            this.imageOptionsExportButton.Name = "imageOptionsExportButton";
+            this.imageOptionsExportButton.Size = new System.Drawing.Size(283, 41);
+            this.imageOptionsExportButton.TabIndex = 1;
+            this.imageOptionsExportButton.Text = "Export (28x28)";
+            this.imageOptionsExportButton.UseVisualStyleBackColor = true;
+            this.imageOptionsExportButton.Click += new System.EventHandler(this.imageOptionsExportButton_Click);
+            // 
+            // imageOptionsClearButton
+            // 
+            this.imageOptionsClearButton.Location = new System.Drawing.Point(7, 20);
+            this.imageOptionsClearButton.Name = "imageOptionsClearButton";
+            this.imageOptionsClearButton.Size = new System.Drawing.Size(283, 41);
+            this.imageOptionsClearButton.TabIndex = 0;
+            this.imageOptionsClearButton.Text = "Clear";
+            this.imageOptionsClearButton.UseVisualStyleBackColor = true;
+            this.imageOptionsClearButton.Click += new System.EventHandler(this.imageOptionsClearButton_Click);
+            // 
+            // penGroupBox
+            // 
+            this.penGroupBox.Controls.Add(this.penSizeLabel);
+            this.penGroupBox.Controls.Add(this.penSizeMinusButton);
+            this.penGroupBox.Controls.Add(this.penSizePlusButton);
+            this.penGroupBox.Location = new System.Drawing.Point(349, 20);
+            this.penGroupBox.Name = "penGroupBox";
+            this.penGroupBox.Size = new System.Drawing.Size(295, 108);
+            this.penGroupBox.TabIndex = 2;
+            this.penGroupBox.TabStop = false;
+            this.penGroupBox.Text = "Pen Size";
+            // 
+            // penSizeLabel
+            // 
+            this.penSizeLabel.AutoSize = true;
+            this.penSizeLabel.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.penSizeLabel.Location = new System.Drawing.Point(129, 48);
+            this.penSizeLabel.Name = "penSizeLabel";
+            this.penSizeLabel.Size = new System.Drawing.Size(36, 26);
+            this.penSizeLabel.TabIndex = 2;
+            this.penSizeLabel.Text = "10";
+            this.penSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // penSizeMinusButton
+            // 
+            this.penSizeMinusButton.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.penSizeMinusButton.Location = new System.Drawing.Point(6, 19);
+            this.penSizeMinusButton.Name = "penSizeMinusButton";
+            this.penSizeMinusButton.Size = new System.Drawing.Size(84, 84);
+            this.penSizeMinusButton.TabIndex = 1;
+            this.penSizeMinusButton.Text = "-";
+            this.penSizeMinusButton.UseVisualStyleBackColor = true;
+            this.penSizeMinusButton.Click += new System.EventHandler(this.penSizeMinusButton_Click);
+            // 
+            // penSizePlusButton
+            // 
+            this.penSizePlusButton.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.penSizePlusButton.Location = new System.Drawing.Point(205, 18);
+            this.penSizePlusButton.Name = "penSizePlusButton";
+            this.penSizePlusButton.Size = new System.Drawing.Size(84, 84);
+            this.penSizePlusButton.TabIndex = 0;
+            this.penSizePlusButton.Text = "+";
+            this.penSizePlusButton.UseVisualStyleBackColor = true;
+            this.penSizePlusButton.Click += new System.EventHandler(this.penSizePlusButton_Click);
+            // 
+            // recognizeButton
+            // 
+            this.recognizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.recognizeButton.Location = new System.Drawing.Point(348, 309);
+            this.recognizeButton.Name = "recognizeButton";
+            this.recognizeButton.Size = new System.Drawing.Size(296, 46);
+            this.recognizeButton.TabIndex = 1;
+            this.recognizeButton.Text = "RECOGNIZE";
+            this.recognizeButton.UseVisualStyleBackColor = true;
+            this.recognizeButton.Click += new System.EventHandler(this.recognizeButton_Click);
+            // 
             // drawingPictureBox
             // 
             this.drawingPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -227,6 +316,9 @@
             this.drawingPictureBox.Size = new System.Drawing.Size(336, 336);
             this.drawingPictureBox.TabIndex = 0;
             this.drawingPictureBox.TabStop = false;
+            this.drawingPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawingPictureBox_MouseDown);
+            this.drawingPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawingPictureBox_MouseMove);
+            this.drawingPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawingPictureBox_MouseUp);
             // 
             // predictionGroupBox
             // 
@@ -247,7 +339,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.predictionTextBox.BackColor = System.Drawing.Color.Black;
-            this.predictionTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.predictionTextBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.predictionTextBox.ForeColor = System.Drawing.Color.White;
             this.predictionTextBox.Location = new System.Drawing.Point(7, 20);
             this.predictionTextBox.Multiline = true;
@@ -257,91 +349,7 @@
             this.predictionTextBox.TabIndex = 0;
             this.predictionTextBox.Text = "Nothing to output...";
             // 
-            // recognizeButton
-            // 
-            this.recognizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.recognizeButton.Location = new System.Drawing.Point(348, 309);
-            this.recognizeButton.Name = "recognizeButton";
-            this.recognizeButton.Size = new System.Drawing.Size(296, 46);
-            this.recognizeButton.TabIndex = 1;
-            this.recognizeButton.Text = "RECOGNIZE";
-            this.recognizeButton.UseVisualStyleBackColor = true;
-            // 
-            // penGroupBox
-            // 
-            this.penGroupBox.Controls.Add(this.penSizeLabel);
-            this.penGroupBox.Controls.Add(this.penSizeMinusButton);
-            this.penGroupBox.Controls.Add(this.penSizePlusButton);
-            this.penGroupBox.Location = new System.Drawing.Point(349, 20);
-            this.penGroupBox.Name = "penGroupBox";
-            this.penGroupBox.Size = new System.Drawing.Size(295, 108);
-            this.penGroupBox.TabIndex = 2;
-            this.penGroupBox.TabStop = false;
-            this.penGroupBox.Text = "Pen Size";
-            // 
-            // penSizePlusButton
-            // 
-            this.penSizePlusButton.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.penSizePlusButton.Location = new System.Drawing.Point(205, 18);
-            this.penSizePlusButton.Name = "penSizePlusButton";
-            this.penSizePlusButton.Size = new System.Drawing.Size(84, 84);
-            this.penSizePlusButton.TabIndex = 0;
-            this.penSizePlusButton.Text = "+";
-            this.penSizePlusButton.UseVisualStyleBackColor = true;
-            // 
-            // penSizeMinusButton
-            // 
-            this.penSizeMinusButton.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.penSizeMinusButton.Location = new System.Drawing.Point(6, 19);
-            this.penSizeMinusButton.Name = "penSizeMinusButton";
-            this.penSizeMinusButton.Size = new System.Drawing.Size(84, 84);
-            this.penSizeMinusButton.TabIndex = 1;
-            this.penSizeMinusButton.Text = "-";
-            this.penSizeMinusButton.UseVisualStyleBackColor = true;
-            // 
-            // penSizeLabel
-            // 
-            this.penSizeLabel.AutoSize = true;
-            this.penSizeLabel.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.penSizeLabel.Location = new System.Drawing.Point(129, 48);
-            this.penSizeLabel.Name = "penSizeLabel";
-            this.penSizeLabel.Size = new System.Drawing.Size(36, 26);
-            this.penSizeLabel.TabIndex = 2;
-            this.penSizeLabel.Text = "10";
-            this.penSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // imageOptionsGroupBox
-            // 
-            this.imageOptionsGroupBox.Controls.Add(this.imageOptionsExportButton);
-            this.imageOptionsGroupBox.Controls.Add(this.imageOptionsClearButton);
-            this.imageOptionsGroupBox.Location = new System.Drawing.Point(348, 153);
-            this.imageOptionsGroupBox.Name = "imageOptionsGroupBox";
-            this.imageOptionsGroupBox.Size = new System.Drawing.Size(296, 127);
-            this.imageOptionsGroupBox.TabIndex = 3;
-            this.imageOptionsGroupBox.TabStop = false;
-            this.imageOptionsGroupBox.Text = "Image Options";
-            // 
-            // imageOptionsClearButton
-            // 
-            this.imageOptionsClearButton.Location = new System.Drawing.Point(7, 20);
-            this.imageOptionsClearButton.Name = "imageOptionsClearButton";
-            this.imageOptionsClearButton.Size = new System.Drawing.Size(283, 41);
-            this.imageOptionsClearButton.TabIndex = 0;
-            this.imageOptionsClearButton.Text = "Clear";
-            this.imageOptionsClearButton.UseVisualStyleBackColor = true;
-            // 
-            // imageOptionsExportButton
-            // 
-            this.imageOptionsExportButton.Location = new System.Drawing.Point(7, 67);
-            this.imageOptionsExportButton.Name = "imageOptionsExportButton";
-            this.imageOptionsExportButton.Size = new System.Drawing.Size(283, 41);
-            this.imageOptionsExportButton.TabIndex = 1;
-            this.imageOptionsExportButton.Text = "Export (28x28)";
-            this.imageOptionsExportButton.UseVisualStyleBackColor = true;
-            // 
-            // s
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -353,7 +361,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.mainMenuStrip;
             this.MaximizeBox = false;
-            this.Name = "s";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RecoDigit";
             this.mainMenuStrip.ResumeLayout(false);
@@ -361,12 +369,12 @@
             this.drawingHistoryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.drawingHistoryDataGrid)).EndInit();
             this.drawingGroupBox.ResumeLayout(false);
+            this.imageOptionsGroupBox.ResumeLayout(false);
+            this.penGroupBox.ResumeLayout(false);
+            this.penGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drawingPictureBox)).EndInit();
             this.predictionGroupBox.ResumeLayout(false);
             this.predictionGroupBox.PerformLayout();
-            this.penGroupBox.ResumeLayout(false);
-            this.penGroupBox.PerformLayout();
-            this.imageOptionsGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
