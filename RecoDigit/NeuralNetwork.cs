@@ -295,14 +295,14 @@ namespace RecoDigit
         public void ExportToFile(string path)
         {
             string name = Path.GetFileNameWithoutExtension(path);
-            string dir = Path.GetDirectoryName(path)
+            string dir = Path.GetDirectoryName(path);
 
             Dictionary<string, string> exports = new Dictionary<string, string>();
             exports.Add("W0", W0.ExportToString());
             exports.Add("W1", W1.ExportToString());
             exports.Add("B0", B0.ExportToString());
             exports.Add("B1", B1.ExportToString());
-            exports.Add("ALPHA", $"{learningRate}");
+            exports.Add("ALPHA", $"{learningRate}".Replace(',', '.'));
 
             using (FileStream fileToOpen = new FileStream(path, FileMode.Create))
             {
@@ -350,11 +350,11 @@ namespace RecoDigit
                             
                             if (entryFile.Name == "ALPHA")
                             {
-                                entries["ALPHA"] = Double.Parse(data);
+                                entries["ALPHA"] = Double.Parse(data.Replace(',', '.'));
                             }
                             else
                             {
-                                entries[entryFile.Name] = Matrix.Parse(data);
+                                entries[entryFile.Name] = Matrix.Parse(data.Replace(',', '.'));
                             }
                         }
                     }

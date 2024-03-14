@@ -178,7 +178,7 @@ namespace RecoDigit
             if (!Double.TryParse(learningRateTextBox.Text, out learningRate))
                 throw new InvalidDataException("Error parsing provided Learning Rate!");
 
-            if (learningRate <= 0)
+            if (learningRate <= 0 || learningRate >= 1.0)
                 throw new InvalidDataException("Invalid Learning Rate!");
 
             if (!int.TryParse(sampleCountTextBox.Text, out samples))

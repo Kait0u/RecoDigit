@@ -11,18 +11,34 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="data\train.csv" />
+    <None Remove="icon.ico" />
+    <None Remove="models\40000s_1000i.neuro" />
     <None Remove="models\8000s_600i.neuro" />
+    <None Remove="models\big.neuro" />
     <None Remove="models\default.neuro" />
+    <None Remove="models\very_big.neuro" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\train.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="models\40000s_1000i.neuro">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="models\8000s_600i.neuro">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="models\big.neuro">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="models\default.neuro">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="models\very_big.neuro">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

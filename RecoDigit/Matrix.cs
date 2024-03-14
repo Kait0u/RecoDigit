@@ -519,7 +519,7 @@ namespace RecoDigit
                 string line = "";
                 for (int c = 0; c < cols; ++c)
                 {
-                    line += $"{matrix[r, c]} ";
+                    line += $"{matrix[r, c]} ".Replace(',', '.');
                 }
                 line.Remove(cols - 1);
                 line += Environment.NewLine;
@@ -556,7 +556,7 @@ namespace RecoDigit
 
                 for (int c = 0; c < cols; ++c)
                 {
-                    result[r, c] = double.Parse(columns[c]);
+                    result[r, c] = double.Parse(columns[c].Replace(',', '.'));
                 }
             }
 
