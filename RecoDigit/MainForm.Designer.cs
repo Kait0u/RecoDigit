@@ -40,6 +40,8 @@
             drawingHistoryCopyButton = new System.Windows.Forms.Button();
             drawingHistoryClearButton = new System.Windows.Forms.Button();
             drawingHistoryDataGrid = new System.Windows.Forms.DataGridView();
+            Image = new System.Windows.Forms.DataGridViewImageColumn();
+            Prediction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             drawingGroupBox = new System.Windows.Forms.GroupBox();
             imageOptionsGroupBox = new System.Windows.Forms.GroupBox();
             imageOptionsExportButton = new System.Windows.Forms.Button();
@@ -52,8 +54,6 @@
             drawingPictureBox = new System.Windows.Forms.PictureBox();
             predictionGroupBox = new System.Windows.Forms.GroupBox();
             predictionTextBox = new System.Windows.Forms.TextBox();
-            Image = new System.Windows.Forms.DataGridViewImageColumn();
-            Prediction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             mainMenuStrip.SuspendLayout();
             drawingHistoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)drawingHistoryDataGrid).BeginInit();
@@ -95,6 +95,7 @@
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // mainMenuStrip
             // 
@@ -185,6 +186,22 @@
             drawingHistoryDataGrid.ShowEditingIcon = false;
             drawingHistoryDataGrid.Size = new System.Drawing.Size(296, 513);
             drawingHistoryDataGrid.TabIndex = 0;
+            // 
+            // Image
+            // 
+            Image.FillWeight = 32.48731F;
+            Image.HeaderText = "Image";
+            Image.Name = "Image";
+            Image.ReadOnly = true;
+            Image.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Prediction
+            // 
+            Prediction.FillWeight = 167.5127F;
+            Prediction.HeaderText = "Prediction";
+            Prediction.Name = "Prediction";
+            Prediction.ReadOnly = true;
+            Prediction.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // drawingGroupBox
             // 
@@ -340,22 +357,6 @@
             predictionTextBox.Size = new System.Drawing.Size(742, 151);
             predictionTextBox.TabIndex = 0;
             predictionTextBox.Text = "Nothing to output...";
-            // 
-            // Image
-            // 
-            Image.FillWeight = 32.48731F;
-            Image.HeaderText = "Image";
-            Image.Name = "Image";
-            Image.ReadOnly = true;
-            Image.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Prediction
-            // 
-            Prediction.FillWeight = 167.5127F;
-            Prediction.HeaderText = "Prediction";
-            Prediction.Name = "Prediction";
-            Prediction.ReadOnly = true;
-            Prediction.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // MainForm
             // 

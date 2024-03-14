@@ -50,6 +50,12 @@ namespace RecoDigit
             set { neuralNetwork = value; }
         }
 
+        public void UpdateLog(string message, bool clear = false)
+        {
+            if (clear) predictionTextBox.Clear();
+            predictionTextBox.AppendText(message);
+        }
+
         private void drawingPictureBox_MouseDown(object sender, MouseEventArgs e)
         {
             isDrawing = true;
@@ -190,13 +196,18 @@ namespace RecoDigit
             DataGridViewRow selectedRow = drawingHistoryDataGrid.SelectedRows[0];
             Bitmap selectedBitmap = fullSizeBitmapHistory[selectedRow];
             int size = drawingPictureBox.Size.Width;
-            graphics.DrawImage(selectedBitmap, 0, 0, size, size);
+            graphics.DrawImage(selectedBitmap, 0, 0);
             drawingPictureBox.Refresh();
         }
 
         private void trainToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new TrainingForm(this).ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

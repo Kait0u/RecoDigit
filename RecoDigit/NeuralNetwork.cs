@@ -54,7 +54,7 @@ namespace RecoDigit
             Z1 = Matrix.DotProduct(W0, Z0) + B0;
             A1 = ReLu(Z1);
             Z2 = Matrix.DotProduct(W1, A1) + B1;
-            A2 = SoftMax(Z2);
+            A2 = Sigmoid(Z2);
 
             return A2.ToArray();
         }
@@ -88,8 +88,10 @@ namespace RecoDigit
             B0 = B0 - learningRate * dB0;
         }
 
-        public void Train(double[][] X, double[][] Y, int iterations = 500, bool debug = false)
+        public void Train(double[][] X, double[][] Y, int iterations = 500, Action<string?, int> logCallback = null)
         {
+            bool debug = logCallback != null;
+
             int exampleCount = X.Length;
             Initialize(exampleCount);
 
@@ -109,10 +111,11 @@ namespace RecoDigit
                 }
 
                 trainingSetAccuracy = (double)successes / exampleCount;
-                if (debug && iterIdx % 10 == 0) Console.WriteLine("[ITERATION {0,6}]: ACCURACY = {1,6:F3}", iterIdx, trainingSetAccuracy);
+                if (debug && iterIdx % 10 == 0) logCallback(string.Format("[ITERATION {0,6}]: ACCURACY = {1,6:F3}", iterIdx, trainingSetAccuracy), iterIdx + 1);
+                else if (debug) logCallback(null, iterIdx + 1);
             }
 
-            if (debug) Console.WriteLine("[FINAL RESULT]: ACCURACY = {0,6:F3}", trainingSetAccuracy);
+            if (debug) logCallback(string.Format("[FINAL RESULT]: ACCURACY = {0,6:F3}", trainingSetAccuracy), iterations);
         }
 
         public static Matrix ReLu(Matrix m)
@@ -162,33 +165,33 @@ namespace RecoDigit
             return result;
         }
 
-        public static Matrix SoftMax(Matrix m)
-        {
-            int rowSize = m.Rows, colSize = m.Columns;
-            Matrix result = new Matrix(rowSize, colSize);
+        //public static Matrix SoftMax(Matrix m)
+        //{
+        //    int rowSize = m.Rows, colSize = m.Columns;
+        //    Matrix result = new Matrix(rowSize, colSize);
 
-            double denominator = 0;
+        //    double denominator = 0;
 
-            for (int r = 0; r < rowSize; ++r)
-            {
-                for (int c = 0; c < colSize; ++c)
-                {
-                    double val = Math.Exp(m[r, c]);
-                    result[r, c] = val;
-                    denominator += val;
-                }
-            }
+        //    for (int r = 0; r < rowSize; ++r)
+        //    {
+        //        for (int c = 0; c < colSize; ++c)
+        //        {
+        //            double val = Math.Exp(m[r, c]);
+        //            result[r, c] = val;
+        //            denominator += val;
+        //        }
+        //    }
 
-            for (int r = 0; r < rowSize; ++r)
-            {
-                for (int c = 0; c < colSize; ++c)
-                {
-                    result[r, c] /= denominator;
-                }
-            }
+        //    for (int r = 0; r < rowSize; ++r)
+        //    {
+        //        for (int c = 0; c < colSize; ++c)
+        //        {
+        //            result[r, c] /= denominator;
+        //        }
+        //    }
 
-            return result;
-        }
+        //    return result;
+        //}
 
         public static Matrix Sigmoid(Matrix m)
         {

@@ -45,6 +45,7 @@
             trainButton = new System.Windows.Forms.Button();
             outputLogGroupBox = new System.Windows.Forms.GroupBox();
             outputLogTextBox = new System.Windows.Forms.TextBox();
+            trainingProgressBar = new System.Windows.Forms.ProgressBar();
             learningParametersGroupBox.SuspendLayout();
             outputLogGroupBox.SuspendLayout();
             SuspendLayout();
@@ -185,7 +186,7 @@
             // 
             // trainButton
             // 
-            trainButton.Location = new System.Drawing.Point(12, 290);
+            trainButton.Location = new System.Drawing.Point(12, 264);
             trainButton.Name = "trainButton";
             trainButton.Size = new System.Drawing.Size(524, 58);
             trainButton.TabIndex = 5;
@@ -196,9 +197,9 @@
             // outputLogGroupBox
             // 
             outputLogGroupBox.Controls.Add(outputLogTextBox);
-            outputLogGroupBox.Location = new System.Drawing.Point(12, 354);
+            outputLogGroupBox.Location = new System.Drawing.Point(12, 361);
             outputLogGroupBox.Name = "outputLogGroupBox";
-            outputLogGroupBox.Size = new System.Drawing.Size(524, 291);
+            outputLogGroupBox.Size = new System.Drawing.Size(524, 284);
             outputLogGroupBox.TabIndex = 6;
             outputLogGroupBox.TabStop = false;
             outputLogGroupBox.Text = "Output Log";
@@ -215,15 +216,24 @@
             outputLogTextBox.Name = "outputLogTextBox";
             outputLogTextBox.ReadOnly = true;
             outputLogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            outputLogTextBox.Size = new System.Drawing.Size(518, 269);
+            outputLogTextBox.Size = new System.Drawing.Size(518, 262);
             outputLogTextBox.TabIndex = 1;
             outputLogTextBox.Text = "Nothing to output...";
+            // 
+            // trainingProgressBar
+            // 
+            trainingProgressBar.ForeColor = System.Drawing.Color.Lime;
+            trainingProgressBar.Location = new System.Drawing.Point(12, 331);
+            trainingProgressBar.Name = "trainingProgressBar";
+            trainingProgressBar.Size = new System.Drawing.Size(524, 23);
+            trainingProgressBar.TabIndex = 7;
             // 
             // TrainingForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(548, 657);
+            Controls.Add(trainingProgressBar);
             Controls.Add(outputLogGroupBox);
             Controls.Add(trainButton);
             Controls.Add(autoLoadCheckbox);
@@ -265,5 +275,6 @@
         private System.Windows.Forms.TextBox outputLogTextBox;
         private System.Windows.Forms.Label learningRateLabel;
         private System.Windows.Forms.TextBox learningRateTextBox;
+        private System.Windows.Forms.ProgressBar trainingProgressBar;
     }
 }
