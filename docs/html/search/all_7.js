@@ -9,7 +9,7 @@ var searchData=
   ['imageutilities_6',['ImageUtilities',['../class_reco_digit_1_1_image_utilities.html',1,'RecoDigit']]],
   ['imageutilities_2ecs_7',['ImageUtilities.cs',['../_image_utilities_8cs.html',1,'']]],
   ['importfromfile_8',['ImportFromFile',['../class_reco_digit_1_1_neural_network.html#a88b8ebd111d5e0ffdc1cf3c9dfbd9d79',1,'RecoDigit::NeuralNetwork']]],
-  ['initialize_9',['Initialize',['../class_reco_digit_1_1_neural_network.html#ac1cc223a1829b6455a51a6818d25603f',1,'RecoDigit::NeuralNetwork']]],
+  ['initialize_9',['Initialize',['../class_reco_digit_1_1_neural_network.html#ad37d91a45f84a70e807348d7a5b03504',1,'RecoDigit::NeuralNetwork']]],
   ['initializecomponent_10',['InitializeComponent',['../class_reco_digit_1_1_main_form.html#a2897b5d234f863cc761315987fc4812c',1,'RecoDigit.MainForm.InitializeComponent()'],['../class_reco_digit_1_1_training_form.html#a5115915d69e4ee27a78480cd8ea94b37',1,'RecoDigit.TrainingForm.InitializeComponent()']]],
   ['initialpensize_11',['initialPenSize',['../class_reco_digit_1_1_main_form.html#a0fe8fbbefed2af19a8bc53e77802f3eb',1,'RecoDigit::MainForm']]],
   ['isdrawing_12',['isDrawing',['../class_reco_digit_1_1_main_form.html#a60a446cca5152562e16be4f5768fe95c',1,'RecoDigit::MainForm']]],

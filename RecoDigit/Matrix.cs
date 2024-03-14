@@ -168,7 +168,7 @@ namespace RecoDigit
         /// <param name="matrix1">Matrix with at least one column.</param>
         /// <param name="matrix2">Matrix with exactly one column.</param>
         /// <returns>A matrix that had a single-column matrix added to its every column.</returns>
-        /// <exception cref="InvalidOperationException"><c>matrix2</c> has got more than one column or two matrices have different numbers of rows.</exception>
+        /// <exception cref="InvalidOperationException"><paramref name="matrix2"/> has got more than one column or two matrices have different numbers of rows.</exception>
         public static Matrix ColumnwiseBroadcastAdd(Matrix matrix1, Matrix matrix2)
         {
             int rows = matrix1.Rows;
@@ -195,7 +195,7 @@ namespace RecoDigit
         /// <param name="matrix1">Matrix with at least one row.</param>
         /// <param name="matrix2">Matrix with exactly one row.</param>
         /// <returns>A matrix that had a single-row matrix added to its every row.</returns>
-        /// <exception cref="InvalidOperationException"><c>matrix2</c> has got more than one row or two matrices have different numbers of columns.</exception>
+        /// <exception cref="InvalidOperationException"><paramref name="matrix2"/> has got more than one row or two matrices have different numbers of columns.</exception>
         public static Matrix RowwiseBroadcastAdd(Matrix matrix1, Matrix matrix2)
         {
             int rows = matrix1.Rows;
@@ -248,7 +248,7 @@ namespace RecoDigit
         /// </summary>
         /// <param name="matrix1">A matrix.</param>
         /// <param name="d">A double to be added to every item in the matrix.</param>
-        /// <returns>A matrix with every of its items increased by <c>d</c></returns>
+        /// <returns>A matrix with every of its items increased by <paramref name="d"/></returns>
         public static Matrix operator +(Matrix matrix1, double d)
         {
             int rows = matrix1.rows, cols = matrix1.cols;
@@ -271,7 +271,7 @@ namespace RecoDigit
         /// </summary>
         /// <param name="d">A double to be added to every item in the matrix.</param>
         /// <param name="matrix1">A matrix.</param>
-        /// <returns>A matrix with every of its items increased by <c>d</c></returns>
+        /// <returns>A matrix with every of its items increased by <paramref name="d"/></returns>
         public static Matrix operator +(double d, Matrix matrix1) => matrix1 + d;
 
         /// <summary>
@@ -279,7 +279,7 @@ namespace RecoDigit
         /// </summary>
         /// <param name="d">A double to be subtracted from every item in the matrix.</param>
         /// <param name="matrix1">A matrix.</param>
-        /// <returns>A matrix with every of its items decreased by <c>d</c></returns>
+        /// <returns>A matrix with every of its items decreased by <paramref name="d"/></returns>
         public static Matrix operator -(Matrix matrix1, double d)
         {
             int rows = matrix1.rows, cols = matrix1.cols;
@@ -302,7 +302,7 @@ namespace RecoDigit
         /// </summary>
         /// <param name="matrix1">A matrix.</param>
         /// <param name="d">A double to multiply every item in the matrix.</param>
-        /// <returns>A matrix with every of its items multiplied by <c>d</c></returns>
+        /// <returns>A matrix with every of its items multiplied by <paramref name="d"/></returns>
         public static Matrix operator *(Matrix matrix1, double d)
         {
             int rows = matrix1.rows, cols = matrix1.cols;
@@ -324,7 +324,7 @@ namespace RecoDigit
         /// </summary>
         /// <param name="d">A double to multiply every item in the matrix.</param>
         /// <param name="matrix1">A matrix.</param>
-        /// <returns>A matrix with every of its items multiplied by <c>d</c></returns>
+        /// <returns>A matrix with every of its items multiplied by <paramref name="d"/></returns>
         public static Matrix operator *(double d, Matrix matrix1) => matrix1 * d;
 
         /// <summary>
@@ -332,7 +332,7 @@ namespace RecoDigit
         /// </summary>
         /// <param name="matrix1">A matrix.</param>
         /// /// <param name="d">A double to divide every item in the matrix.</param>
-        /// <returns>A matrix with every of its items divided by <c>d</c></returns>
+        /// <returns>A matrix with every of its items divided by <paramref name="d"/></returns>
         public static Matrix operator /(Matrix matrix1, double d)
         {
             int rows = matrix1.rows, cols = matrix1.cols;

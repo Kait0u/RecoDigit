@@ -1,6 +1,6 @@
 var NAVTREEINDEX1 =
 {
-"class_reco_digit_1_1_neural_network.html#ad30f7f845b0dbcdd3e566aeb074a33de":[0,0,0,3,14],
+"class_reco_digit_1_1_neural_network.html#ad37d91a45f84a70e807348d7a5b03504":[0,0,0,3,5],
 "class_reco_digit_1_1_neural_network.html#af2ee827acbf907c298f2ba916f9dadcd":[0,0,0,3,18],
 "class_reco_digit_1_1_neural_network.html#af2ee827acbf907c298f2ba916f9dadcd":[1,0,0,3,18],
 "class_reco_digit_1_1_neural_network.html#af9a9bc1134ddb8411d95c657bfe825ed":[1,0,0,3,15],

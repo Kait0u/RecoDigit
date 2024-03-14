@@ -5,7 +5,7 @@ var class_reco_digit_1_1_neural_network =
     [ "BackPropagation", "class_reco_digit_1_1_neural_network.html#ac590fd17ed0789a2736413d65debbe9b", null ],
     [ "ExportToFile", "class_reco_digit_1_1_neural_network.html#a26108fb2a303018752313e0fa7bf5c75", null ],
     [ "ImportFromFile", "class_reco_digit_1_1_neural_network.html#a88b8ebd111d5e0ffdc1cf3c9dfbd9d79", null ],
-    [ "Initialize", "class_reco_digit_1_1_neural_network.html#ac1cc223a1829b6455a51a6818d25603f", null ],
+    [ "Initialize", "class_reco_digit_1_1_neural_network.html#ad37d91a45f84a70e807348d7a5b03504", null ],
     [ "Predict", "class_reco_digit_1_1_neural_network.html#a2d0a11485d6632f40a1c7a0fafba052a", null ],
     [ "PredictMultiple", "class_reco_digit_1_1_neural_network.html#a71ea0030e1af57efd2d711b1e072ab81", null ],
     [ "ReLu", "class_reco_digit_1_1_neural_network.html#aa0956b84a3a1086acf891146a046ca46", null ],

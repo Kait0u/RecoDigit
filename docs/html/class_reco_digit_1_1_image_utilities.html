@@ -99,7 +99,7 @@ $(function(){initNavTree('class_reco_digit_1_1_image_utilities.html',''); initRe
 </div><!--header-->
 <div class="contents">
 
-<p>A utility class for working with images. The main focus is on System.Drawing.Bitmap class. The purpose of this class is to bend Bitmap's functionalities to the needs of the rest of the aplication.  
+<p>A utility class for working with images.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -112,9 +112,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:adb8298b1df43bcc844fdade03416c184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A utility class for working with images. The main focus is on System.Drawing.Bitmap class. The purpose of this class is to bend Bitmap's functionalities to the needs of the rest of the aplication. </p>
+<div class="textblock"><p>A utility class for working with images. </p>
+<p>The main focus is on System.Drawing.Bitmap class. The purpose of this class is to bend Bitmap's functionalities to the needs of the rest of the aplication. </p>
 
-<p class="definition">Definition at line <a class="el" href="_image_utilities_8cs_source.html#l00017">17</a> of file <a class="el" href="_image_utilities_8cs_source.html">ImageUtilities.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_image_utilities_8cs_source.html#l00016">16</a> of file <a class="el" href="_image_utilities_8cs_source.html">ImageUtilities.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adb8298b1df43bcc844fdade03416c184" name="adb8298b1df43bcc844fdade03416c184"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb8298b1df43bcc844fdade03416c184">&#9670;&#160;</a></span>BitmapToArray()</h2>
@@ -142,16 +143,13 @@ Static Public Member Functions</h2></td></tr>
 <p>A method to create an array of bytes of which a bitmap consists, row-by-row, column-by-column. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bitmap</td><td>The bitmap to be turned into an array of bytes. </td></tr>
+    <tr><td class="paramname">bitmap</td><td>The bitmap to be turned into an array of bytes.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>result 1D array of bytes, acquired by going left to right, top to bottom. </dd></dl>
-<p>Converts each pixel's to an 8bit gray value. <br  />
- Formula from: <a href="https://support.ptc.com/help/mathcad/r9.0/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html">https://support.ptc.com/help/mathcad/r9.0/en/index.html#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html</a> <br  />
-</p>
+<dl class="section return"><dt>Returns</dt><dd>1D array of bytes, acquired by going left to right, top to bottom.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_image_utilities_8cs_source.html#l00046">46</a> of file <a class="el" href="_image_utilities_8cs_source.html">ImageUtilities.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_image_utilities_8cs_source.html#l00044">44</a> of file <a class="el" href="_image_utilities_8cs_source.html">ImageUtilities.cs</a>.</p>
 
 </div>
 </div>
@@ -195,16 +193,16 @@ Static Public Member Functions</h2></td></tr>
 <p>A method to create a resized copy of a bitmap. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">original</td><td>The bitmap to be copied and resized. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>The desired width of the output bitmap. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>The desired height of the output bitmap. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">interpolationMode</td><td>The interpolation mode used when scaling the bitmap up or down. </td></tr>
+    <tr><td class="paramname">original</td><td>The bitmap to be copied and resized.</td></tr>
+    <tr><td class="paramname">width</td><td>The desired width of the output bitmap.</td></tr>
+    <tr><td class="paramname">height</td><td>The desired height of the output bitmap.</td></tr>
+    <tr><td class="paramname">interpolationMode</td><td>The interpolation mode used when scaling the bitmap up or down.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>result The resized bitmap. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The resized bitmap (copy).</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_image_utilities_8cs_source.html#l00027">27</a> of file <a class="el" href="_image_utilities_8cs_source.html">ImageUtilities.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_image_utilities_8cs_source.html#l00026">26</a> of file <a class="el" href="_image_utilities_8cs_source.html">ImageUtilities.cs</a>.</p>
 
 </div>
 </div>

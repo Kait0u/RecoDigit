@@ -239,8 +239,6 @@ var NAVTREEINDEX0 =
 "class_reco_digit_1_1_neural_network.html#aa0956b84a3a1086acf891146a046ca46":[0,0,0,3,8],
 "class_reco_digit_1_1_neural_network.html#ab41e0da5fd867b0d816fed700e7c9b98":[0,0,0,3,1],
 "class_reco_digit_1_1_neural_network.html#ab41e0da5fd867b0d816fed700e7c9b98":[1,0,0,3,1],
-"class_reco_digit_1_1_neural_network.html#ac1cc223a1829b6455a51a6818d25603f":[1,0,0,3,5],
-"class_reco_digit_1_1_neural_network.html#ac1cc223a1829b6455a51a6818d25603f":[0,0,0,3,5],
 "class_reco_digit_1_1_neural_network.html#ac590fd17ed0789a2736413d65debbe9b":[1,0,0,3,2],
 "class_reco_digit_1_1_neural_network.html#ac590fd17ed0789a2736413d65debbe9b":[0,0,0,3,2],
 "class_reco_digit_1_1_neural_network.html#ac80400a952598b5f2251b7adf242ee52":[1,0,0,3,23],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "class_reco_digit_1_1_neural_network.html#acca51ff24735cf8b782ac20f0ce7d78d":[0,0,0,3,12],
 "class_reco_digit_1_1_neural_network.html#ad149b0a8b220e6017569c773c42c07b3":[0,0,0,3,13],
 "class_reco_digit_1_1_neural_network.html#ad149b0a8b220e6017569c773c42c07b3":[1,0,0,3,13],
-"class_reco_digit_1_1_neural_network.html#ad30f7f845b0dbcdd3e566aeb074a33de":[1,0,0,3,14]
+"class_reco_digit_1_1_neural_network.html#ad30f7f845b0dbcdd3e566aeb074a33de":[1,0,0,3,14],
+"class_reco_digit_1_1_neural_network.html#ad30f7f845b0dbcdd3e566aeb074a33de":[0,0,0,3,14],
+"class_reco_digit_1_1_neural_network.html#ad37d91a45f84a70e807348d7a5b03504":[1,0,0,3,5]
 };
