@@ -13,43 +13,112 @@ using System.Windows.Forms;
 
 namespace RecoDigit
 {
+    /// <summary>
+    /// A dialog for training new neural networks.
+    /// </summary>
     public partial class TrainingForm : Form
     {
+        /// <summary>
+        /// Reference to the main window for <see cref="NeuralNetwork"/> transferring purposes.
+        /// </summary>
         MainForm parent;
-        string datasetPath, outputModelPath;
 
+        /// <summary>
+        /// Path to the CSV dataset.
+        /// </summary>
+        string datasetPath;
+        
+        /// <summary>
+        /// Path to output the model after training.
+        /// </summary>
+        string outputModelPath;
+
+        /// <summary>
+        /// The rate at which the network adjusts its values.
+        /// </summary>
         double learningRate;
-        int samples, iterations, firstHiddenLayer;
+
+        /// <summary>
+        /// How many samples should be taken from the dataset.
+        /// </summary>
+        int samples;
+
+        /// <summary>
+        /// For how many iterations the training should go on.
+        /// </summary>
+        int iterations; 
+
+        /// <summary>
+        /// How many neurons the first hidden layer should have.
+        /// </summary>
+        int firstHiddenLayer;
+
+        /// <summary>
+        /// Whether the newly trained network should replace the old one without asking for confirmation.
+        /// </summary>
         bool autoLoad;
+
+        /// <summary>
+        /// A newly trained network.
+        /// </summary>
         NeuralNetwork trainedNetwork;
 
-        double[][] xTrain, yTrain;
+        /// <summary>
+        /// A 2D array of training examples, where each column is an input vector.
+        /// </summary>
+        double[][] xTrain;
+
+        /// <summary>
+        /// A 2D array of training outcomes, where each column is a One-Hot encoded label.
+        /// </summary>
+        double[][] yTrain;
 
 
-
+        /// <summary>
+        /// Constructor taking a reference to the main window that will be needed to send the trained network to.
+        /// </summary>
+        /// <param name="mainForm">A reference to the main window</param>
+        /// <seealso cref="MainForm"/>
         public TrainingForm(MainForm mainForm)
         {
             InitializeComponent();
             parent = mainForm;
         }
 
+        /// <summary>
+        /// A method to print a <paramref name="message"/> out to the output text box at the bottom of the window.
+        /// </summary>
+        /// <param name="message">The message to print to the text box.</param>
+        /// <param name="clear">Optional; Whether the text box should be cleared before printing the <paramref name="message"/> to it. (Default: not)</param>
         void UpdateLog(string message, bool clear = false)
         {
             if (clear) outputLogTextBox.Clear();
             outputLogTextBox.AppendText(message + Environment.NewLine);
         }
 
+        /// <summary>
+        /// A threaded version of <see cref="UpdateLog"/>.
+        /// </summary>
+        /// <param name="message">The message to print to the text box.</param>
+        /// <param name="clear">Optional; Whether the text box should be cleared before printing the <paramref name="message"/> to it. (Default: not)</param>
+        /// <remarks>To be used by an asynchronously performed training task.</remarks>
         void UpdateLogThread(string message, bool clear = false)
         {
             Invoke(new Action(() => UpdateLog(message, clear)));
         }
 
-
+        /// <summary>
+        /// Update the progress bar with the index of the current training iteration.
+        /// </summary>
+        /// <param name="currIter">The index of the current training iteration.</param>
         void UpdateProgressBarThread(int currIter)
         {
             Invoke(new Action(() => { trainingProgressBar.Value = currIter; }));
         }
 
+        /// <summary>
+        /// Browses for the training dataset.
+        /// </summary>
         private void learningDatasetPathButton_Click(object sender, EventArgs e)
         {
             string path = Path.Exists(learningDatasetPathTextBox.Text) ?
@@ -69,6 +138,9 @@ namespace RecoDigit
         }
 
 
+        /// <summary>
+        /// Browses for the <see cref="NeuralNetwork"/> output model (.neuro file) save location.
+        /// </summary>
         private void outputModelPathButton_Click(object sender, EventArgs e)
         {
             string path = Path.Exists(learningDatasetPathTextBox.Text) ?
@@ -97,6 +169,10 @@ namespace RecoDigit
             }
         }
 
+        /// <summary>
+        /// Performs an attempt at collecting data from the form fields.
+        /// </summary>
+        /// <exception cref="InvalidDataException">Invalid data in at least one field.</exception>
         private void GetData()
         {
             if (!Double.TryParse(learningRateTextBox.Text, out learningRate))
@@ -135,6 +211,10 @@ namespace RecoDigit
             autoLoad = autoLoadCheckbox.Checked;
         }
 
+        /// <summary>
+        /// Loads and parses the training data for the currently trained <see cref="NeuralNetwork"/>.
+        /// </summary>
+        /// <param name="trainingBatchSize">How many training samples should be taken.</param>
         private void LoadTrainingData(int trainingBatchSize)
         {
             {
@@ -176,6 +256,10 @@ namespace RecoDigit
             }
         }
 
+        /// <summary>
+        /// Starts the training sequence.
+        /// </summary>
+        /// <remarks>This blocks the start button so that the user cannot break anything by attempting to start training the network parallelly.</remarks>
         private async void trainButton_Click(object sender, EventArgs e)
         {
             outputLogTextBox.Clear();

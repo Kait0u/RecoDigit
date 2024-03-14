@@ -1,5 +1,10 @@
 \doxysection{Reco\+Digit.\+Main\+Form Class Reference}
 \hypertarget{class_reco_digit_1_1_main_form}{}\label{class_reco_digit_1_1_main_form}\index{RecoDigit.MainForm@{RecoDigit.MainForm}}
+
+
+The main window of the application, where the user can draw and browse history.  
+
+
 Inheritance diagram for Reco\+Digit.\+Main\+Form\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,9 +15,9 @@ Inheritance diagram for Reco\+Digit.\+Main\+Form\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_reco_digit_1_1_main_form_ac4a04ea61dd0fabca642b5dd66d491da}{Main\+Form}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em A constructor that configures the objects needed to draw. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_aac26a41fa9dcedf821168385cdc68e89}{Update\+Log}} (string message, bool clear=false)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A method to update the log text box at the bottom of the screen, with a message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,61 +27,61 @@ override void \mbox{\hyperlink{class_reco_digit_1_1_main_form_a76560819da00d6e83
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_reco_digit_1_1_neural_network}{Neural\+Network}} \mbox{\hyperlink{class_reco_digit_1_1_main_form_ae1d14d40aad0bdac6c63aa757749ff65}{Network}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A property to get or set the current Neural\+Network of the application. Made primarily for public usage. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_a229c4cbbf21ef61c639e4d58747bfe51}{drawing\+Picture\+Box\+\_\+\+Mouse\+Down}} (object sender, Mouse\+Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Enables drawing, remembers the cursor\textquotesingle{}s current position. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_abd9a235d09d36e5a013316ba0683d151}{drawing\+Picture\+Box\+\_\+\+Mouse\+Move}} (object sender, Mouse\+Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Actually draws, and updates cursor\textquotesingle{}s position for future drawing. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_afea60ba207d90b7810177e4e0c7bcd73}{drawing\+Picture\+Box\+\_\+\+Mouse\+Up}} (object sender, Mouse\+Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Stops drawing. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_ac68e0a11947dd488ebe8eca097e067f1}{image\+Options\+Clear\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Clears the canvas. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_adb4629ad2bcddefd77a69148fb6cce44}{pen\+Size\+Minus\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Decreases the pen size by 1. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_a910a9e0a9f535551b422ff32187d7c44}{pen\+Size\+Plus\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Increases the pen size by 1. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_a11810d3b1eb185fcd940ca4c23b1d10c}{image\+Options\+Export\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Exports the image as a 28x28 bitmap. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_a3061fb909883d37fcdfac71b9632ca1b}{recognize\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Grabs the image drawn by the user and feeds it into the current Neural\+Network and prints its prediction to the textbox. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_adb3cdc816578d06410bc082d6ebf3d98}{about\+Tool\+Strip\+Menu\+Item\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Shows a popup about the author. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_a21e41548c49734a72a1b9835f9d065f7}{load\+Tool\+Strip\+Menu\+Item\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Loads a pre-\/trained Neural\+Network. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_af9ab64a5f69ea9ffd870908ace03edc4}{drawing\+History\+Clear\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Clears the history of drawings and predictions. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_ac5c9f079e8e4f386bbd21bde0544186c}{drawing\+History\+Remove\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Removes the selected item from the history of drawings and predictions. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_af9c1812e226e317f56a9055a84e99e37}{drawing\+History\+Copy\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Loads the selected drawing from the history of drawings back into the canvas. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_a2d95837e70cd2054bf58ee37b19790ad}{train\+Tool\+Strip\+Menu\+Item\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Opens a Training\+Form dialog. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_aae0c58c2e2193afef446087bd8b1cd5b}{exit\+Tool\+Strip\+Menu\+Item\+\_\+\+Click}} (object sender, Event\+Args e)
-\item 
+\begin{DoxyCompactList}\small\item\em Exits the application. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reco_digit_1_1_main_form_a2897b5d234f863cc761315987fc4812c}{Initialize\+Component}} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Bitmap \mbox{\hyperlink{class_reco_digit_1_1_main_form_ac8fb258f0411480f17954ee17b7fcfab}{bitmap}}
-\item 
+\begin{DoxyCompactList}\small\item\em A Bitmap object to store the current image. \end{DoxyCompactList}\item 
 Graphics \mbox{\hyperlink{class_reco_digit_1_1_main_form_a04fc5decd4cff475673f33b26b7e239a}{graphics}}
-\item 
+\begin{DoxyCompactList}\small\item\em A Graphics object to manipulate the bitmap. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reco_digit_1_1_main_form_a60a446cca5152562e16be4f5768fe95c}{is\+Drawing}} = false
-\item 
+\begin{DoxyCompactList}\small\item\em A state variable that keeps track of whether the user is drawing or not. \end{DoxyCompactList}\item 
 Point \mbox{\hyperlink{class_reco_digit_1_1_main_form_a306652256908c01a077b05c2c2bafc3c}{prev\+Loc}}
-\item 
+\begin{DoxyCompactList}\small\item\em Previous cursor location. \end{DoxyCompactList}\item 
 Point \mbox{\hyperlink{class_reco_digit_1_1_main_form_aea776eb4fa76db1ae6f7275ec0482aed}{curr\+Loc}}
-\item 
+\begin{DoxyCompactList}\small\item\em Current cursor location. \end{DoxyCompactList}\item 
 Pen \mbox{\hyperlink{class_reco_digit_1_1_main_form_a9d160d642b8c5751538a0a83cbc44755}{pen}}
-\item 
+\begin{DoxyCompactList}\small\item\em Pen object to draw. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_reco_digit_1_1_neural_network}{Neural\+Network}} \mbox{\hyperlink{class_reco_digit_1_1_main_form_aa73dbaf386800f97cfef8cb5dd400a38}{neural\+Network}}
-\item 
+\begin{DoxyCompactList}\small\item\em A currently used Neural\+Network model. \end{DoxyCompactList}\item 
 Dictionary$<$ Data\+Grid\+View\+Row, Bitmap $>$ \mbox{\hyperlink{class_reco_digit_1_1_main_form_af047868304655e3223d553e49f5f60fc}{full\+Size\+Bitmap\+History}}
-\item 
+\begin{DoxyCompactList}\small\item\em A dictionary that holds the full-\/sized images to be called back from the memory upon user\textquotesingle{}s request. \end{DoxyCompactList}\item 
 System.\+Component\+Model.\+IContainer \mbox{\hyperlink{class_reco_digit_1_1_main_form_a00a30c07d1e1af58ec663bb2b798b9e6}{components}} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\item 
 System.\+Windows.\+Forms.\+Tool\+Strip\+Menu\+Item \mbox{\hyperlink{class_reco_digit_1_1_main_form_aaef39fc5418faee3201788a4520545da}{network\+Tool\+Strip\+Menu\+Item}}
@@ -135,15 +140,15 @@ System.\+Windows.\+Forms.\+Data\+Grid\+View\+Text\+Box\+Column \mbox{\hyperlink{
 \begin{DoxyCompactItemize}
 \item 
 const uint \mbox{\hyperlink{class_reco_digit_1_1_main_form_a0fe8fbbefed2af19a8bc53e77802f3eb}{initial\+Pen\+Size}} = 20
-\item 
-const int \mbox{\hyperlink{class_reco_digit_1_1_main_form_aedc370305b805131658cf45d312edcc9}{output\+Image\+Side}} = 28
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The size of the pen that the app should start up with. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_reco_digit_1_1_main_form_ac071de39c3af3d3b7d55b7805641672d}{output\+Image\+Size}} = 28
+\begin{DoxyCompactList}\small\item\em The size of an output image (necessary to be compatible with the neural network\textquotesingle{}s datasets). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The main window of the application, where the user can draw and browse history. 
 
-
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 
 
@@ -156,7 +161,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00015}{15}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+A constructor that configures the objects needed to draw. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00074}{74}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 
 
@@ -169,7 +178,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00030}{30}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00154}{154}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Shows a popup about the author. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00244}{244}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a76560819da00d6e831d535e1768ea7e8}\label{class_reco_digit_1_1_main_form_a76560819da00d6e831d535e1768ea7e8} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!Dispose@{Dispose}}
@@ -198,7 +211,11 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00014}{14}
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00177}{177}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Clears the history of drawings and predictions. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00275}{275}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_af9c1812e226e317f56a9055a84e99e37}\label{class_reco_digit_1_1_main_form_af9c1812e226e317f56a9055a84e99e37} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!drawingHistoryCopyButton\_Click@{drawingHistoryCopyButton\_Click}}
@@ -208,7 +225,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00177}{177}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00196}{196}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Loads the selected drawing from the history of drawings back into the canvas. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00300}{300}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_ac5c9f079e8e4f386bbd21bde0544186c}\label{class_reco_digit_1_1_main_form_ac5c9f079e8e4f386bbd21bde0544186c} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!drawingHistoryRemoveButton\_Click@{drawingHistoryRemoveButton\_Click}}
@@ -218,7 +239,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00196}{196}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00186}{186}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Removes the selected item from the history of drawings and predictions. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00287}{287}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a229c4cbbf21ef61c639e4d58747bfe51}\label{class_reco_digit_1_1_main_form_a229c4cbbf21ef61c639e4d58747bfe51} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!drawingPictureBox\_MouseDown@{drawingPictureBox\_MouseDown}}
@@ -228,7 +253,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00186}{186}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00059}{59}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Enables drawing, remembers the cursor\textquotesingle{}s current position. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00121}{121}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_abd9a235d09d36e5a013316ba0683d151}\label{class_reco_digit_1_1_main_form_abd9a235d09d36e5a013316ba0683d151} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!drawingPictureBox\_MouseMove@{drawingPictureBox\_MouseMove}}
@@ -238,7 +267,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00059}{59}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Actually draws, and updates cursor\textquotesingle{}s position for future drawing. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00131}{131}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_afea60ba207d90b7810177e4e0c7bcd73}\label{class_reco_digit_1_1_main_form_afea60ba207d90b7810177e4e0c7bcd73} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!drawingPictureBox\_MouseUp@{drawingPictureBox\_MouseUp}}
@@ -248,7 +281,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00066}{66}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Stops drawing. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00145}{145}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_aae0c58c2e2193afef446087bd8b1cd5b}\label{class_reco_digit_1_1_main_form_aae0c58c2e2193afef446087bd8b1cd5b} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!exitToolStripMenuItem\_Click@{exitToolStripMenuItem\_Click}}
@@ -258,7 +295,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00077}{77}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00209}{209}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Exits the application. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00319}{319}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_ac68e0a11947dd488ebe8eca097e067f1}\label{class_reco_digit_1_1_main_form_ac68e0a11947dd488ebe8eca097e067f1} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!imageOptionsClearButton\_Click@{imageOptionsClearButton\_Click}}
@@ -268,7 +309,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00209}{209}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00083}{83}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Clears the canvas. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00154}{154}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a11810d3b1eb185fcd940ca4c23b1d10c}\label{class_reco_digit_1_1_main_form_a11810d3b1eb185fcd940ca4c23b1d10c} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!imageOptionsExportButton\_Click@{imageOptionsExportButton\_Click}}
@@ -278,7 +323,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00083}{83}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00100}{100}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Exports the image as a 28x28 bitmap. 
+
+Functionality made with future training in mind.
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00182}{182}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a2897b5d234f863cc761315987fc4812c}\label{class_reco_digit_1_1_main_form_a2897b5d234f863cc761315987fc4812c} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!InitializeComponent@{InitializeComponent}}
@@ -302,7 +351,16 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00029}{29}
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00159}{159}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Loads a pre-\/trained Neural\+Network. 
+
+\begin{DoxySeeAlso}{See also}
+Neural\+Network, Neural\+Network.\+Import\+From\+File
+
+
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00254}{254}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_adb4629ad2bcddefd77a69148fb6cce44}\label{class_reco_digit_1_1_main_form_adb4629ad2bcddefd77a69148fb6cce44} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!penSizeMinusButton\_Click@{penSizeMinusButton\_Click}}
@@ -312,7 +370,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00159}{159}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00089}{89}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Decreases the pen size by 1. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00164}{164}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a910a9e0a9f535551b422ff32187d7c44}\label{class_reco_digit_1_1_main_form_a910a9e0a9f535551b422ff32187d7c44} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!penSizePlusButton\_Click@{penSizePlusButton\_Click}}
@@ -322,7 +384,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00089}{89}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00095}{95}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Increases the pen size by 1. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00173}{173}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a3061fb909883d37fcdfac71b9632ca1b}\label{class_reco_digit_1_1_main_form_a3061fb909883d37fcdfac71b9632ca1b} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!recognizeButton\_Click@{recognizeButton\_Click}}
@@ -332,7 +398,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00095}{95}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00122}{122}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Grabs the image drawn by the user and feeds it into the current Neural\+Network and prints its prediction to the textbox. 
+
+Given it\textquotesingle{}s a neural network and it was trained on handwritten digits that were written on paper, the accuracy can be relatively low.
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00208}{208}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a2d95837e70cd2054bf58ee37b19790ad}\label{class_reco_digit_1_1_main_form_a2d95837e70cd2054bf58ee37b19790ad} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!trainToolStripMenuItem\_Click@{trainToolStripMenuItem\_Click}}
@@ -342,7 +412,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00122}{122}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00204}{204}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Opens a Training\+Form dialog. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00311}{311}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_aac26a41fa9dcedf821168385cdc68e89}\label{class_reco_digit_1_1_main_form_aac26a41fa9dcedf821168385cdc68e89} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!UpdateLog@{UpdateLog}}
@@ -352,7 +426,18 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00204}{204}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+A method to update the log text box at the bottom of the screen, with a message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to be printed to the text box.\\
+\hline
+{\em clear} & Optional; Whether to clear the text box before printing to it, or not (default\+: not)\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00112}{112}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 
 
@@ -375,7 +460,11 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00400}{400
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+A Bitmap object to store the current image. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a00a30c07d1e1af58ec663bb2b798b9e6}\label{class_reco_digit_1_1_main_form_a00a30c07d1e1af58ec663bb2b798b9e6} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!components@{components}}
@@ -399,7 +488,11 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00008}{8}}
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Current cursor location. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a48fc2ce88a30d26ff1ae7634ff1850b1}\label{class_reco_digit_1_1_main_form_a48fc2ce88a30d26ff1ae7634ff1850b1} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!drawingGroupBox@{drawingGroupBox}}
@@ -489,7 +582,11 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00398}{398
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+A dictionary that holds the full-\/sized images to be called back from the memory upon user\textquotesingle{}s request. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00069}{69}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a04fc5decd4cff475673f33b26b7e239a}\label{class_reco_digit_1_1_main_form_a04fc5decd4cff475673f33b26b7e239a} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!graphics@{graphics}}
@@ -499,7 +596,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00028}{28}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+A Graphics object to manipulate the bitmap. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a39316018eb2a3aedbf80f9dcae1fb5b3}\label{class_reco_digit_1_1_main_form_a39316018eb2a3aedbf80f9dcae1fb5b3} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!Image@{Image}}
@@ -549,7 +650,11 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00415}{415
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+The size of the pen that the app should start up with. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a60a446cca5152562e16be4f5768fe95c}\label{class_reco_digit_1_1_main_form_a60a446cca5152562e16be4f5768fe95c} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!isDrawing@{isDrawing}}
@@ -559,7 +664,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00017}{17}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+A state variable that keeps track of whether the user is drawing or not. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_acb420f4224d3af1fc56466558e3289f3}\label{class_reco_digit_1_1_main_form_acb420f4224d3af1fc56466558e3289f3} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!loadToolStripMenuItem@{loadToolStripMenuItem}}
@@ -599,17 +708,25 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00394}{394
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
-
-\Hypertarget{class_reco_digit_1_1_main_form_aedc370305b805131658cf45d312edcc9}\label{class_reco_digit_1_1_main_form_aedc370305b805131658cf45d312edcc9} 
-\index{RecoDigit.MainForm@{RecoDigit.MainForm}!outputImageSide@{outputImageSide}}
-\index{outputImageSide@{outputImageSide}!RecoDigit.MainForm@{RecoDigit.MainForm}}
-\doxysubsubsection{\texorpdfstring{outputImageSide}{outputImageSide}}
-{\footnotesize\ttfamily const int Reco\+Digit.\+Main\+Form.\+output\+Image\+Side = 28\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+A currently used Neural\+Network model. 
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_main_form_ac071de39c3af3d3b7d55b7805641672d}\label{class_reco_digit_1_1_main_form_ac071de39c3af3d3b7d55b7805641672d} 
+\index{RecoDigit.MainForm@{RecoDigit.MainForm}!outputImageSize@{outputImageSize}}
+\index{outputImageSize@{outputImageSize}!RecoDigit.MainForm@{RecoDigit.MainForm}}
+\doxysubsubsection{\texorpdfstring{outputImageSize}{outputImageSize}}
+{\footnotesize\ttfamily const int Reco\+Digit.\+Main\+Form.\+output\+Image\+Size = 28\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The size of an output image (necessary to be compatible with the neural network\textquotesingle{}s datasets). 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a9d160d642b8c5751538a0a83cbc44755}\label{class_reco_digit_1_1_main_form_a9d160d642b8c5751538a0a83cbc44755} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!pen@{pen}}
@@ -619,7 +736,11 @@ Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00018}{18}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Pen object to draw. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00058}{58}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a4daa46d42fa20d0bbbca9fc58e05cdff}\label{class_reco_digit_1_1_main_form_a4daa46d42fa20d0bbbca9fc58e05cdff} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!penGroupBox@{penGroupBox}}
@@ -699,7 +820,11 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00409}{409
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+Previous cursor location. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 \Hypertarget{class_reco_digit_1_1_main_form_a2b6d90e27a2736bc5c2cfd937f57b6ad}\label{class_reco_digit_1_1_main_form_a2b6d90e27a2736bc5c2cfd937f57b6ad} 
 \index{RecoDigit.MainForm@{RecoDigit.MainForm}!recognizeButton@{recognizeButton}}
@@ -742,7 +867,11 @@ Definition at line \mbox{\hyperlink{_main_form_8_designer_8cs_source_l00395}{395
 
 
 
-Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
+A property to get or set the current Neural\+Network of the application. Made primarily for public usage. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_form_8cs_source_l00093}{93}} of file \mbox{\hyperlink{_main_form_8cs_source}{Main\+Form.\+cs}}.
 
 
 

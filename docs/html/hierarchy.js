@@ -6,5 +6,6 @@ var hierarchy =
     ] ],
     [ "RecoDigit.ImageUtilities", "class_reco_digit_1_1_image_utilities.html", null ],
     [ "RecoDigit.Matrix", "class_reco_digit_1_1_matrix.html", null ],
-    [ "RecoDigit.NeuralNetwork", "class_reco_digit_1_1_neural_network.html", null ]
+    [ "RecoDigit.NeuralNetwork", "class_reco_digit_1_1_neural_network.html", null ],
+    [ "RecoDigit.Utilities", "class_reco_digit_1_1_utilities.html", null ]
 ];

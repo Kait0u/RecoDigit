@@ -125,8 +125,8 @@
 \DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00206}00206\ }
 \DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ idx\ =\ 0;\ idx\ <\ exampleCount;\ ++idx)}
 \DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ prediction\ =\ Utilities.ArgMax(\mbox{\hyperlink{class_reco_digit_1_1_neural_network_ad149b0a8b220e6017569c773c42c07b3}{A2}}.\mbox{\hyperlink{class_reco_digit_1_1_matrix_a5468a59dc274bad626907b04363b2724}{ExtractColumn}}(idx));}
-\DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ actually\ =\ Utilities.ArgMax(Y[idx]);}
+\DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ prediction\ =\ \mbox{\hyperlink{class_reco_digit_1_1_utilities}{Utilities}}.ArgMax(\mbox{\hyperlink{class_reco_digit_1_1_neural_network_ad149b0a8b220e6017569c773c42c07b3}{A2}}.\mbox{\hyperlink{class_reco_digit_1_1_matrix_a5468a59dc274bad626907b04363b2724}{ExtractColumn}}(idx));}
+\DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ actually\ =\ \mbox{\hyperlink{class_reco_digit_1_1_utilities}{Utilities}}.ArgMax(Y[idx]);}
 \DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00211}00211\ }
 \DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prediction\ ==\ actually)\ ++successes;}
 \DoxyCodeLine{\Hypertarget{_neural_network_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}

@@ -109,42 +109,54 @@ $(function(){initNavTree('_utilities_8cs_source.html',''); initResizable(); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_reco_digit.html">RecoDigit</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">internal</span> <span class="keyword">class </span>Utilities</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <span class="keyword">static</span> T[] OneHotEncode&lt;T&gt;(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length) where T : <span class="keyword">struct</span>, INumber&lt;T&gt;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <span class="keywordflow">if</span> (x &gt;= length) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;The argument x cannot be one-hot encoded with such length!&quot;</span>);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            T[] result = <span class="keyword">new</span> T[length];</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            result[x] = (T)Convert.ChangeType(1, typeof(T));</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> ArgMax&lt;T&gt;(T[] x) where T : <span class="keyword">struct</span>, INumber&lt;T&gt;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordtype">int</span> result = 0;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            T currMax = x[result];</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; x.Length; ++i)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="keywordflow">if</span> (x[i] &gt; currMax)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                    currMax = x[i];</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    result = i;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> RandomDoubleRange(<span class="keywordtype">double</span> left = -0.5, <span class="keywordtype">double</span> right = 0.5)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">if</span> (left &gt; right) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;Left cannot be more than right!&quot;</span>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            Random rand = <span class="keyword">new</span> Random();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> rand.NextDouble() * (right - left) + left;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_reco_digit_1_1_utilities.html">   13</a></span>    <span class="keyword">static</span> <span class="keyword">class </span><a class="code hl_class" href="class_reco_digit_1_1_utilities.html">Utilities</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_reco_digit_1_1_utilities.html#aa68b136d7895c96cf749288b2392753d">   23</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> T[] <a class="code hl_function" href="class_reco_digit_1_1_utilities.html#aa68b136d7895c96cf749288b2392753d">OneHotEncode&lt;T&gt;</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> length) where T : <span class="keyword">struct</span>, INumber&lt;T&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">if</span> (x &gt;= length) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;The argument x cannot be one-hot encoded with such length!&quot;</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            T[] result = <span class="keyword">new</span> T[length];</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            result[x] = (T)Convert.ChangeType(1, typeof(T));</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_reco_digit_1_1_utilities.html#a533f9cb48bee485d48cc800313b33743">   39</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_reco_digit_1_1_utilities.html#a533f9cb48bee485d48cc800313b33743">ArgMax&lt;T&gt;</a>(T[] x) where T : <span class="keyword">struct</span>, INumber&lt;T&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            T currMax = x[result];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; x.Length; ++i)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">if</span> (x[i] &gt; currMax)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    currMax = x[i];</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    result = i;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_reco_digit_1_1_utilities.html#aebe5b7acbb7a1e283d8e6a2bfd27441c">   63</a></span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_reco_digit_1_1_utilities.html#aebe5b7acbb7a1e283d8e6a2bfd27441c">RandomDoubleRange</a>(<span class="keywordtype">double</span> left = -0.5, <span class="keywordtype">double</span> right = 0.5)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">if</span> (left &gt; right) <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;Left cannot be more than right!&quot;</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            Random rand = <span class="keyword">new</span> Random();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> rand.NextDouble() * (right - left) + left;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="ttc" id="aclass_reco_digit_1_1_utilities_html"><div class="ttname"><a href="class_reco_digit_1_1_utilities.html">RecoDigit.Utilities</a></div><div class="ttdoc">A utility class providing universal tools that the NeuralNetwork uses, but can exist on their own.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Utilities.cs:14</a></div></div>
+<div class="ttc" id="aclass_reco_digit_1_1_utilities_html_a533f9cb48bee485d48cc800313b33743"><div class="ttname"><a href="class_reco_digit_1_1_utilities.html#a533f9cb48bee485d48cc800313b33743">RecoDigit.Utilities.ArgMax&lt; T &gt;</a></div><div class="ttdeci">static int ArgMax&lt; T &gt;(T[] x)</div><div class="ttdoc">Finds the index of the biggest number in an array.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">Utilities.cs:39</a></div></div>
+<div class="ttc" id="aclass_reco_digit_1_1_utilities_html_aa68b136d7895c96cf749288b2392753d"><div class="ttname"><a href="class_reco_digit_1_1_utilities.html#aa68b136d7895c96cf749288b2392753d">RecoDigit.Utilities.OneHotEncode&lt; T &gt;</a></div><div class="ttdeci">static T[] OneHotEncode&lt; T &gt;(int x, int length)</div><div class="ttdoc">One-Hot encodes a number x  using length  bits.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Utilities.cs:23</a></div></div>
+<div class="ttc" id="aclass_reco_digit_1_1_utilities_html_aebe5b7acbb7a1e283d8e6a2bfd27441c"><div class="ttname"><a href="class_reco_digit_1_1_utilities.html#aebe5b7acbb7a1e283d8e6a2bfd27441c">RecoDigit.Utilities.RandomDoubleRange</a></div><div class="ttdeci">static double RandomDoubleRange(double left=-0.5, double right=0.5)</div><div class="ttdoc">Draws a random double from between two doubles.</div><div class="ttdef"><b>Definition</b> <a href="#l00063">Utilities.cs:63</a></div></div>
 <div class="ttc" id="anamespace_reco_digit_html"><div class="ttname"><a href="namespace_reco_digit.html">RecoDigit</a></div><div class="ttdef"><b>Definition</b> <a href="_image_utilities_8cs_source.html#l00010">ImageUtilities.cs:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

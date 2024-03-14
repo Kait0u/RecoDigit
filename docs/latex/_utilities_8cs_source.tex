@@ -11,41 +11,41 @@
 \DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_reco_digit}{RecoDigit}}}
 \DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{internal}\ \textcolor{keyword}{class\ }Utilities}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00011}00011\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T[]\ OneHotEncode<T>(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ length)\ where\ T\ :\ \textcolor{keyword}{struct},\ INumber<T>}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ length)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentException(\textcolor{stringliteral}{"{}The\ argument\ x\ cannot\ be\ one-\/hot\ encoded\ with\ such\ length!"{}});}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ T[]\ result\ =\ \textcolor{keyword}{new}\ T[length];}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ result[x]\ =\ (T)Convert.ChangeType(1,\ typeof(T));}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ ArgMax<T>(T[]\ x)\ where\ T\ :\ \textcolor{keyword}{struct},\ INumber<T>}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ result\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ T\ currMax\ =\ x[result];}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ x.Length;\ ++i)}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x[i]\ >\ currMax)}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currMax\ =\ x[i];}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ i;}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00034}00034\ }
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ RandomDoubleRange(\textcolor{keywordtype}{double}\ left\ =\ -\/0.5,\ \textcolor{keywordtype}{double}\ right\ =\ 0.5)}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (left\ >\ right)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentException(\textcolor{stringliteral}{"{}Left\ cannot\ be\ more\ than\ right!"{}});}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ Random\ rand\ =\ \textcolor{keyword}{new}\ Random();}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rand.NextDouble()\ *\ (right\ -\/\ left)\ +\ left;}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00044}00044\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00013}\mbox{\hyperlink{class_reco_digit_1_1_utilities}{00013}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reco_digit_1_1_utilities}{Utilities}}}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00023}\mbox{\hyperlink{class_reco_digit_1_1_utilities_aa68b136d7895c96cf749288b2392753d}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T[]\ \mbox{\hyperlink{class_reco_digit_1_1_utilities_aa68b136d7895c96cf749288b2392753d}{OneHotEncode<T>}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ length)\ where\ T\ :\ \textcolor{keyword}{struct},\ INumber<T>}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ length)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentException(\textcolor{stringliteral}{"{}The\ argument\ x\ cannot\ be\ one-\/hot\ encoded\ with\ such\ length!"{}});}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ T[]\ result\ =\ \textcolor{keyword}{new}\ T[length];}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ result[x]\ =\ (T)Convert.ChangeType(1,\ typeof(T));}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00039}\mbox{\hyperlink{class_reco_digit_1_1_utilities_a533f9cb48bee485d48cc800313b33743}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_reco_digit_1_1_utilities_a533f9cb48bee485d48cc800313b33743}{ArgMax<T>}}(T[]\ x)\ where\ T\ :\ \textcolor{keyword}{struct},\ INumber<T>}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ result\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ T\ currMax\ =\ x[result];}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ x.Length;\ ++i)}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x[i]\ >\ currMax)}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currMax\ =\ x[i];}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00063}\mbox{\hyperlink{class_reco_digit_1_1_utilities_aebe5b7acbb7a1e283d8e6a2bfd27441c}{00063}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_reco_digit_1_1_utilities_aebe5b7acbb7a1e283d8e6a2bfd27441c}{RandomDoubleRange}}(\textcolor{keywordtype}{double}\ left\ =\ -\/0.5,\ \textcolor{keywordtype}{double}\ right\ =\ 0.5)}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (left\ >\ right)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentException(\textcolor{stringliteral}{"{}Left\ cannot\ be\ more\ than\ right!"{}});}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ Random\ rand\ =\ \textcolor{keyword}{new}\ Random();}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rand.NextDouble()\ *\ (right\ -\/\ left)\ +\ left;}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_utilities_8cs_source_l00070}00070\ \}}
 
 \end{DoxyCode}

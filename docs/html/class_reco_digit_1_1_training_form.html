@@ -101,6 +101,9 @@ $(function(){initNavTree('class_reco_digit_1_1_training_form.html',''); initResi
   <div class="headertitle"><div class="title">RecoDigit.TrainingForm Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A dialog for training new neural networks.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for RecoDigit.TrainingForm:</div>
 <div class="dyncontent">
@@ -111,6 +114,7 @@ Inheritance diagram for RecoDigit.TrainingForm:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bc377c3ae752930256f2449f849a3e6" id="r_a4bc377c3ae752930256f2449f849a3e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bc377c3ae752930256f2449f849a3e6">TrainingForm</a> (<a class="el" href="class_reco_digit_1_1_main_form.html">MainForm</a> mainForm)</td></tr>
+<tr class="memdesc:a4bc377c3ae752930256f2449f849a3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking a reference to the main window that will be needed to send the trained network to.  <br /></td></tr>
 <tr class="separator:a4bc377c3ae752930256f2449f849a3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -122,20 +126,28 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ad3ec22c72160e5b63bed5ea7f00008f5" id="r_ad3ec22c72160e5b63bed5ea7f00008f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3ec22c72160e5b63bed5ea7f00008f5">UpdateLog</a> (string message, bool clear=false)</td></tr>
+<tr class="memdesc:ad3ec22c72160e5b63bed5ea7f00008f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method to print a <em>message</em>  out to the output text box at the bottom of the window.  <br /></td></tr>
 <tr class="separator:ad3ec22c72160e5b63bed5ea7f00008f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac978bab79bd8635309b2cbcba21e3c77" id="r_ac978bab79bd8635309b2cbcba21e3c77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac978bab79bd8635309b2cbcba21e3c77">UpdateLogThread</a> (string message, bool clear=false)</td></tr>
+<tr class="memdesc:ac978bab79bd8635309b2cbcba21e3c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">A threaded version of UpdateLog.  <br /></td></tr>
 <tr class="separator:ac978bab79bd8635309b2cbcba21e3c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ce95a45dd563c4219d696aea3109bee" id="r_a2ce95a45dd563c4219d696aea3109bee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ce95a45dd563c4219d696aea3109bee">UpdateProgressBarThread</a> (int currIter)</td></tr>
+<tr class="memdesc:a2ce95a45dd563c4219d696aea3109bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the progress bar with the index of the current training iteration.  <br /></td></tr>
 <tr class="separator:a2ce95a45dd563c4219d696aea3109bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b366da4e1b4e1cf35a8f4cf953c0d1" id="r_a98b366da4e1b4e1cf35a8f4cf953c0d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98b366da4e1b4e1cf35a8f4cf953c0d1">learningDatasetPathButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a98b366da4e1b4e1cf35a8f4cf953c0d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Browses for the training dataset.  <br /></td></tr>
 <tr class="separator:a98b366da4e1b4e1cf35a8f4cf953c0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29695860c80a335b652e64ad5daf18c2" id="r_a29695860c80a335b652e64ad5daf18c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29695860c80a335b652e64ad5daf18c2">outputModelPathButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a29695860c80a335b652e64ad5daf18c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Browses for the NeuralNetwork output model (.neuro file) save location.  <br /></td></tr>
 <tr class="separator:a29695860c80a335b652e64ad5daf18c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75cec26b1a5a7f5fb93af91d270b0eb" id="r_ae75cec26b1a5a7f5fb93af91d270b0eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae75cec26b1a5a7f5fb93af91d270b0eb">GetData</a> ()</td></tr>
+<tr class="memdesc:ae75cec26b1a5a7f5fb93af91d270b0eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an attempt at collecting data from the form fields.  <br /></td></tr>
 <tr class="separator:ae75cec26b1a5a7f5fb93af91d270b0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f4453fd845c8425ca92a3072578a064" id="r_a7f4453fd845c8425ca92a3072578a064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f4453fd845c8425ca92a3072578a064">LoadTrainingData</a> (int trainingBatchSize)</td></tr>
+<tr class="memdesc:a7f4453fd845c8425ca92a3072578a064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and parses the training data for the currently trained NeuralNetwork.  <br /></td></tr>
 <tr class="separator:a7f4453fd845c8425ca92a3072578a064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35969ec4016b81eb99301d5e8412544c" id="r_a35969ec4016b81eb99301d5e8412544c"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35969ec4016b81eb99301d5e8412544c">trainButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a35969ec4016b81eb99301d5e8412544c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the training sequence.  <br /></td></tr>
 <tr class="separator:a35969ec4016b81eb99301d5e8412544c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5115915d69e4ee27a78480cd8ea94b37" id="r_a5115915d69e4ee27a78480cd8ea94b37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5115915d69e4ee27a78480cd8ea94b37">InitializeComponent</a> ()</td></tr>
 <tr class="memdesc:a5115915d69e4ee27a78480cd8ea94b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required method for Designer support - do not modify the contents of this method with the code editor.  <br /></td></tr>
@@ -144,26 +156,37 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:adf0bab1972774a93024768c5cad688ed" id="r_adf0bab1972774a93024768c5cad688ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reco_digit_1_1_main_form.html">MainForm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf0bab1972774a93024768c5cad688ed">parent</a></td></tr>
+<tr class="memdesc:adf0bab1972774a93024768c5cad688ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the main window for NeuralNetwork transferring purposes.  <br /></td></tr>
 <tr class="separator:adf0bab1972774a93024768c5cad688ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6dc8881de4f25fe59fc4f3c961681ea" id="r_ac6dc8881de4f25fe59fc4f3c961681ea"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6dc8881de4f25fe59fc4f3c961681ea">datasetPath</a></td></tr>
+<tr class="memdesc:ac6dc8881de4f25fe59fc4f3c961681ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the CSV dataset.  <br /></td></tr>
 <tr class="separator:ac6dc8881de4f25fe59fc4f3c961681ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9780f27466ec4ca272dc41ae3264900" id="r_ad9780f27466ec4ca272dc41ae3264900"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9780f27466ec4ca272dc41ae3264900">outputModelPath</a></td></tr>
+<tr class="memdesc:ad9780f27466ec4ca272dc41ae3264900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to output the model after training.  <br /></td></tr>
 <tr class="separator:ad9780f27466ec4ca272dc41ae3264900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17702a149b9b34f38f2c894dfc16b05a" id="r_a17702a149b9b34f38f2c894dfc16b05a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17702a149b9b34f38f2c894dfc16b05a">learningRate</a></td></tr>
+<tr class="memdesc:a17702a149b9b34f38f2c894dfc16b05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rate at which the network adjusts its values.  <br /></td></tr>
 <tr class="separator:a17702a149b9b34f38f2c894dfc16b05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a748b579e2aa2152bbbf3169a81709c28" id="r_a748b579e2aa2152bbbf3169a81709c28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a748b579e2aa2152bbbf3169a81709c28">samples</a></td></tr>
+<tr class="memdesc:a748b579e2aa2152bbbf3169a81709c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many samples should be taken from the dataset.  <br /></td></tr>
 <tr class="separator:a748b579e2aa2152bbbf3169a81709c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a234b43501382abcf3f844f79e7544a70" id="r_a234b43501382abcf3f844f79e7544a70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a234b43501382abcf3f844f79e7544a70">iterations</a></td></tr>
+<tr class="memdesc:a234b43501382abcf3f844f79e7544a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">For how many iterations the training should go on.  <br /></td></tr>
 <tr class="separator:a234b43501382abcf3f844f79e7544a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfd44e33a888f9fbd6e0d3a5f43b8797" id="r_acfd44e33a888f9fbd6e0d3a5f43b8797"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfd44e33a888f9fbd6e0d3a5f43b8797">firstHiddenLayer</a></td></tr>
+<tr class="memdesc:acfd44e33a888f9fbd6e0d3a5f43b8797"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many neurons the first hidden layer should have.  <br /></td></tr>
 <tr class="separator:acfd44e33a888f9fbd6e0d3a5f43b8797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a858a899247ae8386d2b0aba97d34124c" id="r_a858a899247ae8386d2b0aba97d34124c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a858a899247ae8386d2b0aba97d34124c">autoLoad</a></td></tr>
+<tr class="memdesc:a858a899247ae8386d2b0aba97d34124c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the newly trained network should replace the old one without asking for confirmation.  <br /></td></tr>
 <tr class="separator:a858a899247ae8386d2b0aba97d34124c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1faac03b9d5ade19e390e5361cf16fb" id="r_ab1faac03b9d5ade19e390e5361cf16fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reco_digit_1_1_neural_network.html">NeuralNetwork</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1faac03b9d5ade19e390e5361cf16fb">trainedNetwork</a></td></tr>
+<tr class="memdesc:ab1faac03b9d5ade19e390e5361cf16fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A newly trained network.  <br /></td></tr>
 <tr class="separator:ab1faac03b9d5ade19e390e5361cf16fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe942bc223718df044af4d320b100d80" id="r_afe942bc223718df044af4d320b100d80"><td class="memItemLeft" align="right" valign="top">double[][]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe942bc223718df044af4d320b100d80">xTrain</a></td></tr>
+<tr class="memdesc:afe942bc223718df044af4d320b100d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">A 2D array of training examples, where each column is an input vector.  <br /></td></tr>
 <tr class="separator:afe942bc223718df044af4d320b100d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5141404e50541e09ef4ac576803df5f8" id="r_a5141404e50541e09ef4ac576803df5f8"><td class="memItemLeft" align="right" valign="top">double[][]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5141404e50541e09ef4ac576803df5f8">yTrain</a></td></tr>
+<tr class="memdesc:a5141404e50541e09ef4ac576803df5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A 2D array of training outcomes, where each column is a One-Hot encoded label.  <br /></td></tr>
 <tr class="separator:a5141404e50541e09ef4ac576803df5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6464842be5c6fa63528a6c4c6f584df5" id="r_a6464842be5c6fa63528a6c4c6f584df5"><td class="memItemLeft" align="right" valign="top">System.ComponentModel.IContainer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6464842be5c6fa63528a6c4c6f584df5">components</a> = null</td></tr>
 <tr class="memdesc:a6464842be5c6fa63528a6c4c6f584df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required designer variable.  <br /></td></tr>
@@ -210,8 +233,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a1cd446228c77ed000659917f028bcb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00016">16</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<div class="textblock"><p>A dialog for training new neural networks. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00019">19</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4bc377c3ae752930256f2449f849a3e6" name="a4bc377c3ae752930256f2449f849a3e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bc377c3ae752930256f2449f849a3e6">&#9670;&#160;</a></span>TrainingForm()</h2>
@@ -228,7 +252,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00030">30</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Constructor taking a reference to the main window that will be needed to send the trained network to. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mainForm</td><td>A reference to the main window</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>MainForm</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00082">82</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -291,7 +324,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00100">100</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Performs an attempt at collecting data from the form fields. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidDataException</td><td>Invalid data in at least one field.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00176">176</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -351,7 +392,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00053">53</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Browses for the training dataset. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00122">122</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -378,7 +421,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00138">138</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Loads and parses the training data for the currently trained NeuralNetwork. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">trainingBatchSize</td><td>How many training samples should be taken.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00218">218</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -409,7 +460,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00072">72</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Browses for the NeuralNetwork output model (.neuro file) save location. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00144">144</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -440,7 +493,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00179">179</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Starts the training sequence. </p>
+<p>This blocks the start button so that the user cannot break anything by attempting to start training the network parallelly.</p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00263">263</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -471,7 +527,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00036">36</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>A method to print a <em>message</em>  out to the output text box at the bottom of the window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The message to print to the text box.</td></tr>
+    <tr><td class="paramname">clear</td><td>Optional; Whether the text box should be cleared before printing the <em>message</em>  to it. (Default: not)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00093">93</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -502,7 +567,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00042">42</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>A threaded version of UpdateLog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The message to print to the text box.</td></tr>
+    <tr><td class="paramname">clear</td><td>Optional; Whether the text box should be cleared before printing the <em>message</em>  to it. (Default: not)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>To be used by an asynchronously performed training task.</p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00105">105</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -529,7 +604,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00048">48</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Update the progress bar with the index of the current training iteration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currIter</td><td>The index of the current training iteration.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00114">114</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -554,7 +637,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00023">23</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Whether the newly trained network should replace the old one without asking for confirmation. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00059">59</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -628,7 +713,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00019">19</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Path to the CSV dataset. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00029">29</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -676,7 +763,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00022">22</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>How many neurons the first hidden layer should have. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00054">54</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -724,7 +813,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00022">22</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>For how many iterations the training should go on. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00049">49</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -892,7 +983,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00021">21</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>The rate at which the network adjusts its values. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00039">39</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1012,7 +1105,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00019">19</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Path to output the model after training. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00034">34</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1108,7 +1203,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00018">18</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>Reference to the main window for NeuralNetwork transferring purposes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00024">24</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1180,7 +1277,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00022">22</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>How many samples should be taken from the dataset. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00044">44</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1228,7 +1327,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00024">24</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>A newly trained network. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00064">64</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1377,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00026">26</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>A 2D array of training examples, where each column is an input vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00069">69</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1403,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00026">26</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
+<p>A 2D array of training outcomes, where each column is a One-Hot encoded label. </p>
+
+<p class="definition">Definition at line <a class="el" href="_training_form_8cs_source.html#l00074">74</a> of file <a class="el" href="_training_form_8cs_source.html">TrainingForm.cs</a>.</p>
 
 </div>
 </div>

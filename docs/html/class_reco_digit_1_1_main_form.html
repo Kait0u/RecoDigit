@@ -103,6 +103,9 @@ $(function(){initNavTree('class_reco_digit_1_1_main_form.html',''); initResizabl
   <div class="headertitle"><div class="title">RecoDigit.MainForm Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The main window of the application, where the user can draw and browse history.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for RecoDigit.MainForm:</div>
 <div class="dyncontent">
@@ -113,8 +116,10 @@ Inheritance diagram for RecoDigit.MainForm:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4a04ea61dd0fabca642b5dd66d491da" id="r_ac4a04ea61dd0fabca642b5dd66d491da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4a04ea61dd0fabca642b5dd66d491da">MainForm</a> ()</td></tr>
+<tr class="memdesc:ac4a04ea61dd0fabca642b5dd66d491da"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor that configures the objects needed to draw.  <br /></td></tr>
 <tr class="separator:ac4a04ea61dd0fabca642b5dd66d491da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac26a41fa9dcedf821168385cdc68e89" id="r_aac26a41fa9dcedf821168385cdc68e89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac26a41fa9dcedf821168385cdc68e89">UpdateLog</a> (string message, bool clear=false)</td></tr>
+<tr class="memdesc:aac26a41fa9dcedf821168385cdc68e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method to update the log text box at the bottom of the screen, with a message.  <br /></td></tr>
 <tr class="separator:aac26a41fa9dcedf821168385cdc68e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -126,39 +131,55 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ae1d14d40aad0bdac6c63aa757749ff65" id="r_ae1d14d40aad0bdac6c63aa757749ff65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reco_digit_1_1_neural_network.html">NeuralNetwork</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1d14d40aad0bdac6c63aa757749ff65">Network</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae1d14d40aad0bdac6c63aa757749ff65"><td class="mdescLeft">&#160;</td><td class="mdescRight">A property to get or set the current NeuralNetwork of the application. Made primarily for public usage.  <br /></td></tr>
 <tr class="separator:ae1d14d40aad0bdac6c63aa757749ff65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a229c4cbbf21ef61c639e4d58747bfe51" id="r_a229c4cbbf21ef61c639e4d58747bfe51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229c4cbbf21ef61c639e4d58747bfe51">drawingPictureBox_MouseDown</a> (object sender, MouseEventArgs e)</td></tr>
+<tr class="memdesc:a229c4cbbf21ef61c639e4d58747bfe51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables drawing, remembers the cursor's current position.  <br /></td></tr>
 <tr class="separator:a229c4cbbf21ef61c639e4d58747bfe51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9a235d09d36e5a013316ba0683d151" id="r_abd9a235d09d36e5a013316ba0683d151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd9a235d09d36e5a013316ba0683d151">drawingPictureBox_MouseMove</a> (object sender, MouseEventArgs e)</td></tr>
+<tr class="memdesc:abd9a235d09d36e5a013316ba0683d151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually draws, and updates cursor's position for future drawing.  <br /></td></tr>
 <tr class="separator:abd9a235d09d36e5a013316ba0683d151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afea60ba207d90b7810177e4e0c7bcd73" id="r_afea60ba207d90b7810177e4e0c7bcd73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afea60ba207d90b7810177e4e0c7bcd73">drawingPictureBox_MouseUp</a> (object sender, MouseEventArgs e)</td></tr>
+<tr class="memdesc:afea60ba207d90b7810177e4e0c7bcd73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops drawing.  <br /></td></tr>
 <tr class="separator:afea60ba207d90b7810177e4e0c7bcd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac68e0a11947dd488ebe8eca097e067f1" id="r_ac68e0a11947dd488ebe8eca097e067f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac68e0a11947dd488ebe8eca097e067f1">imageOptionsClearButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:ac68e0a11947dd488ebe8eca097e067f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the canvas.  <br /></td></tr>
 <tr class="separator:ac68e0a11947dd488ebe8eca097e067f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb4629ad2bcddefd77a69148fb6cce44" id="r_adb4629ad2bcddefd77a69148fb6cce44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb4629ad2bcddefd77a69148fb6cce44">penSizeMinusButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:adb4629ad2bcddefd77a69148fb6cce44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases the pen size by 1.  <br /></td></tr>
 <tr class="separator:adb4629ad2bcddefd77a69148fb6cce44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a910a9e0a9f535551b422ff32187d7c44" id="r_a910a9e0a9f535551b422ff32187d7c44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a910a9e0a9f535551b422ff32187d7c44">penSizePlusButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a910a9e0a9f535551b422ff32187d7c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases the pen size by 1.  <br /></td></tr>
 <tr class="separator:a910a9e0a9f535551b422ff32187d7c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11810d3b1eb185fcd940ca4c23b1d10c" id="r_a11810d3b1eb185fcd940ca4c23b1d10c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11810d3b1eb185fcd940ca4c23b1d10c">imageOptionsExportButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a11810d3b1eb185fcd940ca4c23b1d10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the image as a 28x28 bitmap.  <br /></td></tr>
 <tr class="separator:a11810d3b1eb185fcd940ca4c23b1d10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3061fb909883d37fcdfac71b9632ca1b" id="r_a3061fb909883d37fcdfac71b9632ca1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3061fb909883d37fcdfac71b9632ca1b">recognizeButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a3061fb909883d37fcdfac71b9632ca1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grabs the image drawn by the user and feeds it into the current NeuralNetwork and prints its prediction to the textbox.  <br /></td></tr>
 <tr class="separator:a3061fb909883d37fcdfac71b9632ca1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb3cdc816578d06410bc082d6ebf3d98" id="r_adb3cdc816578d06410bc082d6ebf3d98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb3cdc816578d06410bc082d6ebf3d98">aboutToolStripMenuItem_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:adb3cdc816578d06410bc082d6ebf3d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows a popup about the author.  <br /></td></tr>
 <tr class="separator:adb3cdc816578d06410bc082d6ebf3d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21e41548c49734a72a1b9835f9d065f7" id="r_a21e41548c49734a72a1b9835f9d065f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21e41548c49734a72a1b9835f9d065f7">loadToolStripMenuItem_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a21e41548c49734a72a1b9835f9d065f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a pre-trained NeuralNetwork.  <br /></td></tr>
 <tr class="separator:a21e41548c49734a72a1b9835f9d065f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9ab64a5f69ea9ffd870908ace03edc4" id="r_af9ab64a5f69ea9ffd870908ace03edc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9ab64a5f69ea9ffd870908ace03edc4">drawingHistoryClearButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:af9ab64a5f69ea9ffd870908ace03edc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the history of drawings and predictions.  <br /></td></tr>
 <tr class="separator:af9ab64a5f69ea9ffd870908ace03edc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5c9f079e8e4f386bbd21bde0544186c" id="r_ac5c9f079e8e4f386bbd21bde0544186c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5c9f079e8e4f386bbd21bde0544186c">drawingHistoryRemoveButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:ac5c9f079e8e4f386bbd21bde0544186c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the selected item from the history of drawings and predictions.  <br /></td></tr>
 <tr class="separator:ac5c9f079e8e4f386bbd21bde0544186c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9c1812e226e317f56a9055a84e99e37" id="r_af9c1812e226e317f56a9055a84e99e37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9c1812e226e317f56a9055a84e99e37">drawingHistoryCopyButton_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:af9c1812e226e317f56a9055a84e99e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the selected drawing from the history of drawings back into the canvas.  <br /></td></tr>
 <tr class="separator:af9c1812e226e317f56a9055a84e99e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d95837e70cd2054bf58ee37b19790ad" id="r_a2d95837e70cd2054bf58ee37b19790ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d95837e70cd2054bf58ee37b19790ad">trainToolStripMenuItem_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:a2d95837e70cd2054bf58ee37b19790ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a TrainingForm dialog.  <br /></td></tr>
 <tr class="separator:a2d95837e70cd2054bf58ee37b19790ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae0c58c2e2193afef446087bd8b1cd5b" id="r_aae0c58c2e2193afef446087bd8b1cd5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae0c58c2e2193afef446087bd8b1cd5b">exitToolStripMenuItem_Click</a> (object sender, EventArgs e)</td></tr>
+<tr class="memdesc:aae0c58c2e2193afef446087bd8b1cd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exits the application.  <br /></td></tr>
 <tr class="separator:aae0c58c2e2193afef446087bd8b1cd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2897b5d234f863cc761315987fc4812c" id="r_a2897b5d234f863cc761315987fc4812c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2897b5d234f863cc761315987fc4812c">InitializeComponent</a> ()</td></tr>
 <tr class="memdesc:a2897b5d234f863cc761315987fc4812c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required method for Designer support - do not modify the contents of this method with the code editor.  <br /></td></tr>
@@ -167,20 +188,28 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ac8fb258f0411480f17954ee17b7fcfab" id="r_ac8fb258f0411480f17954ee17b7fcfab"><td class="memItemLeft" align="right" valign="top">Bitmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8fb258f0411480f17954ee17b7fcfab">bitmap</a></td></tr>
+<tr class="memdesc:ac8fb258f0411480f17954ee17b7fcfab"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Bitmap object to store the current image.  <br /></td></tr>
 <tr class="separator:ac8fb258f0411480f17954ee17b7fcfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fc5decd4cff475673f33b26b7e239a" id="r_a04fc5decd4cff475673f33b26b7e239a"><td class="memItemLeft" align="right" valign="top">Graphics&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04fc5decd4cff475673f33b26b7e239a">graphics</a></td></tr>
+<tr class="memdesc:a04fc5decd4cff475673f33b26b7e239a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Graphics object to manipulate the bitmap.  <br /></td></tr>
 <tr class="separator:a04fc5decd4cff475673f33b26b7e239a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60a446cca5152562e16be4f5768fe95c" id="r_a60a446cca5152562e16be4f5768fe95c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60a446cca5152562e16be4f5768fe95c">isDrawing</a> = false</td></tr>
+<tr class="memdesc:a60a446cca5152562e16be4f5768fe95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A state variable that keeps track of whether the user is drawing or not.  <br /></td></tr>
 <tr class="separator:a60a446cca5152562e16be4f5768fe95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a306652256908c01a077b05c2c2bafc3c" id="r_a306652256908c01a077b05c2c2bafc3c"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a306652256908c01a077b05c2c2bafc3c">prevLoc</a></td></tr>
+<tr class="memdesc:a306652256908c01a077b05c2c2bafc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous cursor location.  <br /></td></tr>
 <tr class="separator:a306652256908c01a077b05c2c2bafc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea776eb4fa76db1ae6f7275ec0482aed" id="r_aea776eb4fa76db1ae6f7275ec0482aed"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea776eb4fa76db1ae6f7275ec0482aed">currLoc</a></td></tr>
+<tr class="memdesc:aea776eb4fa76db1ae6f7275ec0482aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current cursor location.  <br /></td></tr>
 <tr class="separator:aea776eb4fa76db1ae6f7275ec0482aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d160d642b8c5751538a0a83cbc44755" id="r_a9d160d642b8c5751538a0a83cbc44755"><td class="memItemLeft" align="right" valign="top">Pen&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d160d642b8c5751538a0a83cbc44755">pen</a></td></tr>
+<tr class="memdesc:a9d160d642b8c5751538a0a83cbc44755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pen object to draw.  <br /></td></tr>
 <tr class="separator:a9d160d642b8c5751538a0a83cbc44755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa73dbaf386800f97cfef8cb5dd400a38" id="r_aa73dbaf386800f97cfef8cb5dd400a38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_reco_digit_1_1_neural_network.html">NeuralNetwork</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa73dbaf386800f97cfef8cb5dd400a38">neuralNetwork</a></td></tr>
+<tr class="memdesc:aa73dbaf386800f97cfef8cb5dd400a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">A currently used NeuralNetwork model.  <br /></td></tr>
 <tr class="separator:aa73dbaf386800f97cfef8cb5dd400a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af047868304655e3223d553e49f5f60fc" id="r_af047868304655e3223d553e49f5f60fc"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; DataGridViewRow, Bitmap &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af047868304655e3223d553e49f5f60fc">fullSizeBitmapHistory</a></td></tr>
+<tr class="memdesc:af047868304655e3223d553e49f5f60fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dictionary that holds the full-sized images to be called back from the memory upon user's request.  <br /></td></tr>
 <tr class="separator:af047868304655e3223d553e49f5f60fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00a30c07d1e1af58ec663bb2b798b9e6" id="r_a00a30c07d1e1af58ec663bb2b798b9e6"><td class="memItemLeft" align="right" valign="top">System.ComponentModel.IContainer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00a30c07d1e1af58ec663bb2b798b9e6">components</a> = null</td></tr>
 <tr class="memdesc:a00a30c07d1e1af58ec663bb2b798b9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required designer variable.  <br /></td></tr>
@@ -241,13 +270,16 @@ Private Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a0fe8fbbefed2af19a8bc53e77802f3eb" id="r_a0fe8fbbefed2af19a8bc53e77802f3eb"><td class="memItemLeft" align="right" valign="top">const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fe8fbbefed2af19a8bc53e77802f3eb">initialPenSize</a> = 20</td></tr>
+<tr class="memdesc:a0fe8fbbefed2af19a8bc53e77802f3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the pen that the app should start up with.  <br /></td></tr>
 <tr class="separator:a0fe8fbbefed2af19a8bc53e77802f3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedc370305b805131658cf45d312edcc9" id="r_aedc370305b805131658cf45d312edcc9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedc370305b805131658cf45d312edcc9">outputImageSide</a> = 28</td></tr>
-<tr class="separator:aedc370305b805131658cf45d312edcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac071de39c3af3d3b7d55b7805641672d" id="r_ac071de39c3af3d3b7d55b7805641672d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac071de39c3af3d3b7d55b7805641672d">outputImageSize</a> = 28</td></tr>
+<tr class="memdesc:ac071de39c3af3d3b7d55b7805641672d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of an output image (necessary to be compatible with the neural network's datasets).  <br /></td></tr>
+<tr class="separator:ac071de39c3af3d3b7d55b7805641672d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00015">15</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<div class="textblock"><p>The main window of the application, where the user can draw and browse history. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00018">18</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac4a04ea61dd0fabca642b5dd66d491da" name="ac4a04ea61dd0fabca642b5dd66d491da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4a04ea61dd0fabca642b5dd66d491da">&#9670;&#160;</a></span>MainForm()</h2>
@@ -264,7 +296,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00030">30</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>A constructor that configures the objects needed to draw. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00074">74</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -296,7 +330,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00154">154</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Shows a popup about the author. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00244">244</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -362,7 +398,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00177">177</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Clears the history of drawings and predictions. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00275">275</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -393,7 +431,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00196">196</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Loads the selected drawing from the history of drawings back into the canvas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00300">300</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -424,7 +464,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00186">186</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Removes the selected item from the history of drawings and predictions. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00287">287</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -455,7 +497,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00059">59</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Enables drawing, remembers the cursor's current position. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00121">121</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -486,7 +530,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00066">66</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Actually draws, and updates cursor's position for future drawing. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00131">131</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -517,7 +563,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00077">77</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Stops drawing. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00145">145</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -548,7 +596,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00209">209</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Exits the application. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00319">319</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -579,7 +629,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00083">83</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Clears the canvas. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00154">154</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -610,7 +662,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00100">100</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Exports the image as a 28x28 bitmap. </p>
+<p>Functionality made with future training in mind.</p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00182">182</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -670,7 +725,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00159">159</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Loads a pre-trained NeuralNetwork. </p>
+<dl class="section see"><dt>See also</dt><dd>NeuralNetwork, NeuralNetwork.ImportFromFile</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00254">254</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -701,7 +759,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00089">89</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Decreases the pen size by 1. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00164">164</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -732,7 +792,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00095">95</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Increases the pen size by 1. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00173">173</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -763,7 +825,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00122">122</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Grabs the image drawn by the user and feeds it into the current NeuralNetwork and prints its prediction to the textbox. </p>
+<p>Given it's a neural network and it was trained on handwritten digits that were written on paper, the accuracy can be relatively low.</p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00208">208</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -794,7 +859,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00204">204</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Opens a TrainingForm dialog. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00311">311</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -817,7 +884,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00053">53</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>A method to update the log text box at the bottom of the screen, with a message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The message to be printed to the text box.</td></tr>
+    <tr><td class="paramname">clear</td><td>Optional; Whether to clear the text box before printing to it, or not (default: not)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00112">112</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -866,7 +942,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00020">20</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>A Bitmap object to store the current image. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00033">33</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -916,7 +994,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00023">23</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Current cursor location. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00053">53</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1212,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00028">28</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>A dictionary that holds the full-sized images to be called back from the memory upon user's request. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00069">69</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1238,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00021">21</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>A Graphics object to manipulate the bitmap. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00038">38</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1360,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00017">17</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>The size of the pen that the app should start up with. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00023">23</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1386,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00022">22</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>A state variable that keeps track of whether the user is drawing or not. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00043">43</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1396,12 +1484,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00026">26</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>A currently used NeuralNetwork model. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00064">64</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
-<a id="aedc370305b805131658cf45d312edcc9" name="aedc370305b805131658cf45d312edcc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedc370305b805131658cf45d312edcc9">&#9670;&#160;</a></span>outputImageSide</h2>
+<a id="ac071de39c3af3d3b7d55b7805641672d" name="ac071de39c3af3d3b7d55b7805641672d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac071de39c3af3d3b7d55b7805641672d">&#9670;&#160;</a></span>outputImageSize</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1410,7 +1500,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int RecoDigit.MainForm.outputImageSide = 28</td>
+          <td class="memname">const int RecoDigit.MainForm.outputImageSize = 28</td>
         </tr>
       </table>
   </td>
@@ -1420,7 +1510,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00018">18</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>The size of an output image (necessary to be compatible with the neural network's datasets). </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00028">28</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1444,7 +1536,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00024">24</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Pen object to draw. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00058">58</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1636,7 +1730,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00023">23</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>Previous cursor location. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00048">48</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>
@@ -1733,7 +1829,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00047">47</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
+<p>A property to get or set the current NeuralNetwork of the application. Made primarily for public usage. </p>
+
+<p class="definition">Definition at line <a class="el" href="_main_form_8cs_source.html#l00093">93</a> of file <a class="el" href="_main_form_8cs_source.html">MainForm.cs</a>.</p>
 
 </div>
 </div>

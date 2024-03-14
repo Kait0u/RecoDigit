@@ -43,7 +43,7 @@ var class_reco_digit_1_1_main_form =
     [ "mainMenuStrip", "class_reco_digit_1_1_main_form.html#ab109233e3dbd61aa231416c2a8fa02a9", null ],
     [ "networkToolStripMenuItem", "class_reco_digit_1_1_main_form.html#aaef39fc5418faee3201788a4520545da", null ],
     [ "neuralNetwork", "class_reco_digit_1_1_main_form.html#aa73dbaf386800f97cfef8cb5dd400a38", null ],
-    [ "outputImageSide", "class_reco_digit_1_1_main_form.html#aedc370305b805131658cf45d312edcc9", null ],
+    [ "outputImageSize", "class_reco_digit_1_1_main_form.html#ac071de39c3af3d3b7d55b7805641672d", null ],
     [ "pen", "class_reco_digit_1_1_main_form.html#a9d160d642b8c5751538a0a83cbc44755", null ],
     [ "penGroupBox", "class_reco_digit_1_1_main_form.html#a4daa46d42fa20d0bbbca9fc58e05cdff", null ],
     [ "penSizeLabel", "class_reco_digit_1_1_main_form.html#a7e3525f8d1a7143d4e288d3ecd88d0c9", null ],
