@@ -25,8 +25,6 @@ namespace RecoDigit
 
         double[][] xTrain, yTrain;
 
-        Thread trainingThread;
-
 
 
         public TrainingForm(MainForm mainForm)
