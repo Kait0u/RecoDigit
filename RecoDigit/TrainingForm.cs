@@ -19,7 +19,7 @@ namespace RecoDigit
         string datasetPath, outputModelPath;
 
         double learningRate;
-        int samples, iterations;
+        int samples, iterations, firstHiddenLayer;
         bool autoLoad;
         NeuralNetwork trainedNetwork;
 
@@ -117,6 +117,12 @@ namespace RecoDigit
             if (iterations <= 0)
                 throw new InvalidDataException("Invalid iteration count!");
 
+            if (!int.TryParse(fiestHiddenSizeTextBox.Text, out firstHiddenLayer))
+                throw new InvalidDataException("Error parsing the provided size for the 1st hidden layer!");
+
+            if (firstHiddenLayer <= 0)
+                throw new InvalidDataException("Invalid 1st hidden layer size!");
+
             datasetPath = learningDatasetPathTextBox.Text;
             outputModelPath = outputModelPathTextBox.Text;
 
@@ -173,6 +179,8 @@ namespace RecoDigit
         private async void trainButton_Click(object sender, EventArgs e)
         {
             outputLogTextBox.Clear();
+            trainButton.Enabled = false;
+            trainingProgressBar.Value = 0;
 
             Action<string?, int> trainingLogCallback = (string? message, int currIter) =>
             {
@@ -187,7 +195,7 @@ namespace RecoDigit
                 GetData();
                 LoadTrainingData(samples);
                 trainingProgressBar.Maximum = iterations;
-                trainedNetwork = new NeuralNetwork(learningRate);
+                trainedNetwork = new NeuralNetwork(firstHiddenLayer, learningRate);
                 await Task.Run(() => trainedNetwork.Train(xTrain, yTrain, iterations, trainingLogCallback));
                 trainedNetwork.ExportToFile(outputModelPath);
                 
@@ -195,6 +203,7 @@ namespace RecoDigit
             catch (Exception ex)
             {
                 UpdateLog(ex.Message);
+                trainButton.Enabled = true;
                 return;
             }
 

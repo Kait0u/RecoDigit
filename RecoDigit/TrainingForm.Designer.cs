@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             learningParametersGroupBox = new System.Windows.Forms.GroupBox();
+            firstHiddenSizeLabel = new System.Windows.Forms.Label();
+            fiestHiddenSizeTextBox = new System.Windows.Forms.TextBox();
             learningRateLabel = new System.Windows.Forms.Label();
             learningRateTextBox = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
@@ -53,6 +55,8 @@
             // learningParametersGroupBox
             // 
             learningParametersGroupBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            learningParametersGroupBox.Controls.Add(firstHiddenSizeLabel);
+            learningParametersGroupBox.Controls.Add(fiestHiddenSizeTextBox);
             learningParametersGroupBox.Controls.Add(learningRateLabel);
             learningParametersGroupBox.Controls.Add(learningRateTextBox);
             learningParametersGroupBox.Controls.Add(label1);
@@ -68,6 +72,24 @@
             learningParametersGroupBox.TabIndex = 0;
             learningParametersGroupBox.TabStop = false;
             learningParametersGroupBox.Text = "Learning Parameters";
+            // 
+            // firstHiddenSizeLabel
+            // 
+            firstHiddenSizeLabel.AutoSize = true;
+            firstHiddenSizeLabel.Location = new System.Drawing.Point(267, 126);
+            firstHiddenSizeLabel.Name = "firstHiddenSizeLabel";
+            firstHiddenSizeLabel.Size = new System.Drawing.Size(101, 15);
+            firstHiddenSizeLabel.TabIndex = 10;
+            firstHiddenSizeLabel.Text = "1st Hidden Layer: ";
+            firstHiddenSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // fiestHiddenSizeTextBox
+            // 
+            fiestHiddenSizeTextBox.Location = new System.Drawing.Point(374, 123);
+            fiestHiddenSizeTextBox.Name = "fiestHiddenSizeTextBox";
+            fiestHiddenSizeTextBox.Size = new System.Drawing.Size(144, 23);
+            fiestHiddenSizeTextBox.TabIndex = 9;
+            fiestHiddenSizeTextBox.Text = "10";
             // 
             // learningRateLabel
             // 
@@ -276,5 +298,7 @@
         private System.Windows.Forms.Label learningRateLabel;
         private System.Windows.Forms.TextBox learningRateTextBox;
         private System.Windows.Forms.ProgressBar trainingProgressBar;
+        private System.Windows.Forms.Label firstHiddenSizeLabel;
+        private System.Windows.Forms.TextBox fiestHiddenSizeTextBox;
     }
 }

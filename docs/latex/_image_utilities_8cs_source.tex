@@ -1,0 +1,52 @@
+\doxysection{Image\+Utilities.\+cs}
+\hypertarget{_image_utilities_8cs_source}{}\label{_image_utilities_8cs_source}\index{RecoDigit/ImageUtilities.cs@{RecoDigit/ImageUtilities.cs}}
+\mbox{\hyperlink{_image_utilities_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Drawing;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Drawing.Imaging;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Runtime.InteropServices;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00010}\mbox{\hyperlink{namespace_reco_digit}{00010}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_reco_digit}{RecoDigit}}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00017}\mbox{\hyperlink{class_reco_digit_1_1_image_utilities}{00017}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reco_digit_1_1_image_utilities}{ImageUtilities}}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00027}\mbox{\hyperlink{class_reco_digit_1_1_image_utilities_ad8af740c43d5ba29a0285438715dce7b}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Bitmap\ \mbox{\hyperlink{class_reco_digit_1_1_image_utilities_ad8af740c43d5ba29a0285438715dce7b}{Resize}}(Bitmap\ original,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ System.Drawing.Drawing2D.InterpolationMode\ interpolationMode\ =\ System.Drawing.Drawing2D.InterpolationMode.Default)}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ Bitmap\ result\ =\ \textcolor{keyword}{new}\ Bitmap(width,\ height);}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (Graphics\ gResult\ =\ Graphics.FromImage(result))}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gResult.InterpolationMode\ =\ interpolationMode;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gResult.DrawImage(original,\ 0,\ 0,\ width,\ height);}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00046}\mbox{\hyperlink{class_reco_digit_1_1_image_utilities_adb8298b1df43bcc844fdade03416c184}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{byte}[]\ \mbox{\hyperlink{class_reco_digit_1_1_image_utilities_adb8298b1df43bcc844fdade03416c184}{BitmapToArray}}(Bitmap\ bitmap)}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{byte}[]\ result\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{byte}[bitmap.Width\ *\ bitmap.Height];}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ y\ =\ 0;\ y\ <\ bitmap.Height;\ ++y)}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ x\ =\ 0;\ x\ <\ bitmap.Width;\ ++x)}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\ pixel\ =\ bitmap.GetPixel(x,\ y);}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{byte}\ gray\ =\ (byte)(\textcolor{keywordtype}{int})(pixel.R\ *\ 0.299\ +\ pixel.G\ *\ 0.587\ +\ pixel.B\ *\ 0.114);}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result[y\ *\ bitmap.Height\ +\ x]\ =\ gray;\ \textcolor{comment}{//\ This\ indexing\ feels\ a\ bit\ unnatural\ but\ it\ has\ to\ be\ like\ this\ for\ it\ to\ work}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_image_utilities_8cs_source_l00068}00068\ \}}
+
+\end{DoxyCode}

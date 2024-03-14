@@ -1,0 +1,323 @@
+\doxysection{Reco\+Digit.\+Neural\+Network Class Reference}
+\hypertarget{class_reco_digit_1_1_neural_network}{}\label{class_reco_digit_1_1_neural_network}\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_neural_network_a3173d9435c4c3d56d09b880d2e7156fa}{Neural\+Network}} (int \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a56b0c59ce02aba7d4f2ddda670b657b2}{first\+Hidden\+Layer\+Size}}=10, double \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a5e2df3467d02eb3fe7b736fc3e91c388}{learning\+Rate}}=0.\+15)
+\item 
+double\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a2d0a11485d6632f40a1c7a0fafba052a}{Predict}} (double\mbox{[}$\,$\mbox{]} x)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a689022155dcc27eecd46e5f1130b75c7}{Train}} (double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} X, double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Y, int iterations=500, Action$<$ string?, int $>$ log\+Callback=null)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a26108fb2a303018752313e0fa7bf5c75}{Export\+To\+File}} (string path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_aa0956b84a3a1086acf891146a046ca46}{Re\+Lu}} (\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} m)
+\item 
+static \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a8aba474d2a57037b3e8a9907ade75f1d}{Re\+Lu\+Der}} (\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} m)
+\item 
+static \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a549e82f783e9c3272f5f5cf9f7fbe486}{Sigmoid}} (\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} m)
+\item 
+static \mbox{\hyperlink{class_reco_digit_1_1_neural_network}{Neural\+Network}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a88b8ebd111d5e0ffdc1cf3c9dfbd9d79}{Import\+From\+File}} (string path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_neural_network_ab41e0da5fd867b0d816fed700e7c9b98}{Neural\+Network}} (\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a89ccd2a3bebccfd3cebf9781d25cd9f3}{W0}}, \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a3cc6b849a98798ef79b01fbb6564f5d4}{W1}}, \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_ad30f7f845b0dbcdd3e566aeb074a33de}{B0}}, \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_af9a9bc1134ddb8411d95c657bfe825ed}{B1}}, double \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a5e2df3467d02eb3fe7b736fc3e91c388}{learning\+Rate}}=0.\+15)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_neural_network_ac1cc223a1829b6455a51a6818d25603f}{Initialize}} (int batch\+Size, int first\+Hidden\+Size)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a71ea0030e1af57efd2d711b1e072ab81}{Predict\+Multiple}} (double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} X)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_neural_network_ac590fd17ed0789a2736413d65debbe9b}{Back\+Propagation}} (double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} X, double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} one\+HotY)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a89ccd2a3bebccfd3cebf9781d25cd9f3}{W0}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a3cc6b849a98798ef79b01fbb6564f5d4}{W1}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a7f4ec3748c16bb99344e964e0fdcc467}{Z0}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a2a5f14c67830e88b534d6ad2928be0e7}{Z1}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_ac80400a952598b5f2251b7adf242ee52}{Z2}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_acca51ff24735cf8b782ac20f0ce7d78d}{A1}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_ad149b0a8b220e6017569c773c42c07b3}{A2}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_ad30f7f845b0dbcdd3e566aeb074a33de}{B0}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} \mbox{\hyperlink{class_reco_digit_1_1_neural_network_af9a9bc1134ddb8411d95c657bfe825ed}{B1}}
+\item 
+int \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a56b0c59ce02aba7d4f2ddda670b657b2}{first\+Hidden\+Layer\+Size}}
+\item 
+double \mbox{\hyperlink{class_reco_digit_1_1_neural_network_a5e2df3467d02eb3fe7b736fc3e91c388}{learning\+Rate}}
+\item 
+double \mbox{\hyperlink{class_reco_digit_1_1_neural_network_af2ee827acbf907c298f2ba916f9dadcd}{training\+Set\+Accuracy}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_reco_digit_1_1_neural_network_a3173d9435c4c3d56d09b880d2e7156fa}\label{class_reco_digit_1_1_neural_network_a3173d9435c4c3d56d09b880d2e7156fa} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!NeuralNetwork@{NeuralNetwork}}
+\index{NeuralNetwork@{NeuralNetwork}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{NeuralNetwork()}{NeuralNetwork()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Reco\+Digit.\+Neural\+Network.\+Neural\+Network (\begin{DoxyParamCaption}\item[{int}]{first\+Hidden\+Layer\+Size = {\ttfamily 10},  }\item[{double}]{learning\+Rate = {\ttfamily 0\+:\+:15} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_ab41e0da5fd867b0d816fed700e7c9b98}\label{class_reco_digit_1_1_neural_network_ab41e0da5fd867b0d816fed700e7c9b98} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!NeuralNetwork@{NeuralNetwork}}
+\index{NeuralNetwork@{NeuralNetwork}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{NeuralNetwork()}{NeuralNetwork()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Reco\+Digit.\+Neural\+Network.\+Neural\+Network (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}}}]{W0,  }\item[{\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}}}]{W1,  }\item[{\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}}}]{B0,  }\item[{\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}}}]{B1,  }\item[{double}]{learning\+Rate = {\ttfamily 0\+:\+:15} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_reco_digit_1_1_neural_network_ac590fd17ed0789a2736413d65debbe9b}\label{class_reco_digit_1_1_neural_network_ac590fd17ed0789a2736413d65debbe9b} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!BackPropagation@{BackPropagation}}
+\index{BackPropagation@{BackPropagation}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{BackPropagation()}{BackPropagation()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Neural\+Network.\+Back\+Propagation (\begin{DoxyParamCaption}\item[{double}]{X\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{double}]{one\+HotY\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a26108fb2a303018752313e0fa7bf5c75}\label{class_reco_digit_1_1_neural_network_a26108fb2a303018752313e0fa7bf5c75} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!ExportToFile@{ExportToFile}}
+\index{ExportToFile@{ExportToFile}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ExportToFile()}{ExportToFile()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Neural\+Network.\+Export\+To\+File (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00222}{222}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a88b8ebd111d5e0ffdc1cf3c9dfbd9d79}\label{class_reco_digit_1_1_neural_network_a88b8ebd111d5e0ffdc1cf3c9dfbd9d79} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!ImportFromFile@{ImportFromFile}}
+\index{ImportFromFile@{ImportFromFile}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ImportFromFile()}{ImportFromFile()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_reco_digit_1_1_neural_network}{Neural\+Network}} Reco\+Digit.\+Neural\+Network.\+Import\+From\+File (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00252}{252}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_ac1cc223a1829b6455a51a6818d25603f}\label{class_reco_digit_1_1_neural_network_ac1cc223a1829b6455a51a6818d25603f} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Neural\+Network.\+Initialize (\begin{DoxyParamCaption}\item[{int}]{batch\+Size,  }\item[{int}]{first\+Hidden\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a2d0a11485d6632f40a1c7a0fafba052a}\label{class_reco_digit_1_1_neural_network_a2d0a11485d6632f40a1c7a0fafba052a} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!Predict@{Predict}}
+\index{Predict@{Predict}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Predict()}{Predict()}}
+{\footnotesize\ttfamily double\mbox{[}$\,$\mbox{]} Reco\+Digit.\+Neural\+Network.\+Predict (\begin{DoxyParamCaption}\item[{double\mbox{[}$\,$\mbox{]}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a71ea0030e1af57efd2d711b1e072ab81}\label{class_reco_digit_1_1_neural_network_a71ea0030e1af57efd2d711b1e072ab81} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!PredictMultiple@{PredictMultiple}}
+\index{PredictMultiple@{PredictMultiple}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{PredictMultiple()}{PredictMultiple()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Neural\+Network.\+Predict\+Multiple (\begin{DoxyParamCaption}\item[{double}]{X\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_aa0956b84a3a1086acf891146a046ca46}\label{class_reco_digit_1_1_neural_network_aa0956b84a3a1086acf891146a046ca46} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!ReLu@{ReLu}}
+\index{ReLu@{ReLu}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ReLu()}{ReLu()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+Re\+Lu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00123}{123}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a8aba474d2a57037b3e8a9907ade75f1d}\label{class_reco_digit_1_1_neural_network_a8aba474d2a57037b3e8a9907ade75f1d} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!ReLuDer@{ReLuDer}}
+\index{ReLuDer@{ReLuDer}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ReLuDer()}{ReLuDer()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+Re\+Lu\+Der (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00146}{146}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a549e82f783e9c3272f5f5cf9f7fbe486}\label{class_reco_digit_1_1_neural_network_a549e82f783e9c3272f5f5cf9f7fbe486} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!Sigmoid@{Sigmoid}}
+\index{Sigmoid@{Sigmoid}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Sigmoid()}{Sigmoid()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+Sigmoid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00198}{198}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a689022155dcc27eecd46e5f1130b75c7}\label{class_reco_digit_1_1_neural_network_a689022155dcc27eecd46e5f1130b75c7} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!Train@{Train}}
+\index{Train@{Train}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Train()}{Train()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Neural\+Network.\+Train (\begin{DoxyParamCaption}\item[{double}]{X\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{double}]{Y\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{iterations = {\ttfamily 500},  }\item[{Action$<$ string?, int $>$}]{log\+Callback = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00093}{93}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_reco_digit_1_1_neural_network_acca51ff24735cf8b782ac20f0ce7d78d}\label{class_reco_digit_1_1_neural_network_acca51ff24735cf8b782ac20f0ce7d78d} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!A1@{A1}}
+\index{A1@{A1}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{A1}{A1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+A1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_ad149b0a8b220e6017569c773c42c07b3}\label{class_reco_digit_1_1_neural_network_ad149b0a8b220e6017569c773c42c07b3} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!A2@{A2}}
+\index{A2@{A2}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{A2}{A2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+A2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_ad30f7f845b0dbcdd3e566aeb074a33de}\label{class_reco_digit_1_1_neural_network_ad30f7f845b0dbcdd3e566aeb074a33de} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!B0@{B0}}
+\index{B0@{B0}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{B0}{B0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+B0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_af9a9bc1134ddb8411d95c657bfe825ed}\label{class_reco_digit_1_1_neural_network_af9a9bc1134ddb8411d95c657bfe825ed} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!B1@{B1}}
+\index{B1@{B1}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{B1}{B1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+B1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a56b0c59ce02aba7d4f2ddda670b657b2}\label{class_reco_digit_1_1_neural_network_a56b0c59ce02aba7d4f2ddda670b657b2} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!firstHiddenLayerSize@{firstHiddenLayerSize}}
+\index{firstHiddenLayerSize@{firstHiddenLayerSize}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{firstHiddenLayerSize}{firstHiddenLayerSize}}
+{\footnotesize\ttfamily int Reco\+Digit.\+Neural\+Network.\+first\+Hidden\+Layer\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a5e2df3467d02eb3fe7b736fc3e91c388}\label{class_reco_digit_1_1_neural_network_a5e2df3467d02eb3fe7b736fc3e91c388} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!learningRate@{learningRate}}
+\index{learningRate@{learningRate}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{learningRate}{learningRate}}
+{\footnotesize\ttfamily double Reco\+Digit.\+Neural\+Network.\+learning\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_af2ee827acbf907c298f2ba916f9dadcd}\label{class_reco_digit_1_1_neural_network_af2ee827acbf907c298f2ba916f9dadcd} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!trainingSetAccuracy@{trainingSetAccuracy}}
+\index{trainingSetAccuracy@{trainingSetAccuracy}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{trainingSetAccuracy}{trainingSetAccuracy}}
+{\footnotesize\ttfamily double Reco\+Digit.\+Neural\+Network.\+training\+Set\+Accuracy = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a89ccd2a3bebccfd3cebf9781d25cd9f3}\label{class_reco_digit_1_1_neural_network_a89ccd2a3bebccfd3cebf9781d25cd9f3} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!W0@{W0}}
+\index{W0@{W0}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{W0}{W0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+W0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a3cc6b849a98798ef79b01fbb6564f5d4}\label{class_reco_digit_1_1_neural_network_a3cc6b849a98798ef79b01fbb6564f5d4} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!W1@{W1}}
+\index{W1@{W1}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{W1}{W1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+W1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a7f4ec3748c16bb99344e964e0fdcc467}\label{class_reco_digit_1_1_neural_network_a7f4ec3748c16bb99344e964e0fdcc467} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!Z0@{Z0}}
+\index{Z0@{Z0}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Z0}{Z0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+Z0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_a2a5f14c67830e88b534d6ad2928be0e7}\label{class_reco_digit_1_1_neural_network_a2a5f14c67830e88b534d6ad2928be0e7} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!Z1@{Z1}}
+\index{Z1@{Z1}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Z1}{Z1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+Z1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_neural_network_ac80400a952598b5f2251b7adf242ee52}\label{class_reco_digit_1_1_neural_network_ac80400a952598b5f2251b7adf242ee52} 
+\index{RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}!Z2@{Z2}}
+\index{Z2@{Z2}!RecoDigit.NeuralNetwork@{RecoDigit.NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Z2}{Z2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_matrix}{Matrix}} Reco\+Digit.\+Neural\+Network.\+Z2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_neural_network_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_neural_network_8cs_source}{Neural\+Network.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Reco\+Digit/\mbox{\hyperlink{_neural_network_8cs}{Neural\+Network.\+cs}}\end{DoxyCompactItemize}

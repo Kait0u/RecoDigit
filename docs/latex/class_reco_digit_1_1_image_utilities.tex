@@ -1,0 +1,81 @@
+\doxysection{Reco\+Digit.\+Image\+Utilities Class Reference}
+\hypertarget{class_reco_digit_1_1_image_utilities}{}\label{class_reco_digit_1_1_image_utilities}\index{RecoDigit.ImageUtilities@{RecoDigit.ImageUtilities}}
+
+
+A utility class for working with images. The main focus is on System.\+Drawing.\+Bitmap class. The purpose of this class is to bend Bitmap\textquotesingle{}s functionalities to the needs of the rest of the aplication.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Bitmap \mbox{\hyperlink{class_reco_digit_1_1_image_utilities_ad8af740c43d5ba29a0285438715dce7b}{Resize}} (Bitmap original, int width, int height, System.\+Drawing.\+Drawing2\+D.\+Interpolation\+Mode interpolation\+Mode=System.\+Drawing.\+Drawing2\+D.\+Interpolation\+Mode.\+Default)
+\begin{DoxyCompactList}\small\item\em A method to create a resized copy of a bitmap. \end{DoxyCompactList}\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_reco_digit_1_1_image_utilities_adb8298b1df43bcc844fdade03416c184}{Bitmap\+To\+Array}} (Bitmap bitmap)
+\begin{DoxyCompactList}\small\item\em A method to create an array of bytes of which a bitmap consists, row-\/by-\/row, column-\/by-\/column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A utility class for working with images. The main focus is on System.\+Drawing.\+Bitmap class. The purpose of this class is to bend Bitmap\textquotesingle{}s functionalities to the needs of the rest of the aplication. 
+
+Definition at line \mbox{\hyperlink{_image_utilities_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_image_utilities_8cs_source}{Image\+Utilities.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_reco_digit_1_1_image_utilities_adb8298b1df43bcc844fdade03416c184}\label{class_reco_digit_1_1_image_utilities_adb8298b1df43bcc844fdade03416c184} 
+\index{RecoDigit.ImageUtilities@{RecoDigit.ImageUtilities}!BitmapToArray@{BitmapToArray}}
+\index{BitmapToArray@{BitmapToArray}!RecoDigit.ImageUtilities@{RecoDigit.ImageUtilities}}
+\doxysubsubsection{\texorpdfstring{BitmapToArray()}{BitmapToArray()}}
+{\footnotesize\ttfamily static byte\mbox{[}$\,$\mbox{]} Reco\+Digit.\+Image\+Utilities.\+Bitmap\+To\+Array (\begin{DoxyParamCaption}\item[{Bitmap}]{bitmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A method to create an array of bytes of which a bitmap consists, row-\/by-\/row, column-\/by-\/column. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bitmap} & The bitmap to be turned into an array of bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result 1D array of bytes, acquired by going left to right, top to bottom. 
+\end{DoxyReturn}
+Converts each pixel\textquotesingle{}s to an 8bit gray value. ~\newline
+ Formula from\+: \href{https://support.ptc.com/help/mathcad/r9.0/en/index.html\#page/PTC_Mathcad_Help/example_grayscale_and_color_in_images.html}{\texttt{ https\+://support.\+ptc.\+com/help/mathcad/r9.\+0/en/index.\+html\#page/\+PTC\+\_\+\+Mathcad\+\_\+\+Help/example\+\_\+grayscale\+\_\+and\+\_\+color\+\_\+in\+\_\+images.\+html}} ~\newline
+
+
+Definition at line \mbox{\hyperlink{_image_utilities_8cs_source_l00046}{46}} of file \mbox{\hyperlink{_image_utilities_8cs_source}{Image\+Utilities.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_image_utilities_ad8af740c43d5ba29a0285438715dce7b}\label{class_reco_digit_1_1_image_utilities_ad8af740c43d5ba29a0285438715dce7b} 
+\index{RecoDigit.ImageUtilities@{RecoDigit.ImageUtilities}!Resize@{Resize}}
+\index{Resize@{Resize}!RecoDigit.ImageUtilities@{RecoDigit.ImageUtilities}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily static Bitmap Reco\+Digit.\+Image\+Utilities.\+Resize (\begin{DoxyParamCaption}\item[{Bitmap}]{original,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{System\+::\+Drawing\+::\+Drawing2\+D\+::\+Interpolation\+Mode}]{interpolation\+Mode = {\ttfamily System\+:\+:Drawing\+:\+:Drawing2D\+:\+:InterpolationMode\+:\+:Default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A method to create a resized copy of a bitmap. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em original} & The bitmap to be copied and resized. \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & The desired width of the output bitmap. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & The desired height of the output bitmap. \\
+\hline
+\mbox{\texttt{ in}}  & {\em interpolation\+Mode} & The interpolation mode used when scaling the bitmap up or down. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result The resized bitmap. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_image_utilities_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_image_utilities_8cs_source}{Image\+Utilities.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Reco\+Digit/\mbox{\hyperlink{_image_utilities_8cs}{Image\+Utilities.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,575 @@
+\doxysection{Reco\+Digit.\+Training\+Form Class Reference}
+\hypertarget{class_reco_digit_1_1_training_form}{}\label{class_reco_digit_1_1_training_form}\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+Inheritance diagram for Reco\+Digit.\+Training\+Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_reco_digit_1_1_training_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_training_form_a4bc377c3ae752930256f2449f849a3e6}{Training\+Form}} (\mbox{\hyperlink{class_reco_digit_1_1_main_form}{Main\+Form}} main\+Form)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_reco_digit_1_1_training_form_a8aab582b837986b4808a87ab4893c1be}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_training_form_ad3ec22c72160e5b63bed5ea7f00008f5}{Update\+Log}} (string message, bool clear=false)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_training_form_ac978bab79bd8635309b2cbcba21e3c77}{Update\+Log\+Thread}} (string message, bool clear=false)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_training_form_a2ce95a45dd563c4219d696aea3109bee}{Update\+Progress\+Bar\+Thread}} (int curr\+Iter)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_training_form_a98b366da4e1b4e1cf35a8f4cf953c0d1}{learning\+Dataset\+Path\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_training_form_a29695860c80a335b652e64ad5daf18c2}{output\+Model\+Path\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_training_form_ae75cec26b1a5a7f5fb93af91d270b0eb}{Get\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_training_form_a7f4453fd845c8425ca92a3072578a064}{Load\+Training\+Data}} (int training\+Batch\+Size)
+\item 
+async void \mbox{\hyperlink{class_reco_digit_1_1_training_form_a35969ec4016b81eb99301d5e8412544c}{train\+Button\+\_\+\+Click}} (object sender, Event\+Args e)
+\item 
+void \mbox{\hyperlink{class_reco_digit_1_1_training_form_a5115915d69e4ee27a78480cd8ea94b37}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_main_form}{Main\+Form}} \mbox{\hyperlink{class_reco_digit_1_1_training_form_adf0bab1972774a93024768c5cad688ed}{parent}}
+\item 
+string \mbox{\hyperlink{class_reco_digit_1_1_training_form_ac6dc8881de4f25fe59fc4f3c961681ea}{dataset\+Path}}
+\item 
+string \mbox{\hyperlink{class_reco_digit_1_1_training_form_ad9780f27466ec4ca272dc41ae3264900}{output\+Model\+Path}}
+\item 
+double \mbox{\hyperlink{class_reco_digit_1_1_training_form_a17702a149b9b34f38f2c894dfc16b05a}{learning\+Rate}}
+\item 
+int \mbox{\hyperlink{class_reco_digit_1_1_training_form_a748b579e2aa2152bbbf3169a81709c28}{samples}}
+\item 
+int \mbox{\hyperlink{class_reco_digit_1_1_training_form_a234b43501382abcf3f844f79e7544a70}{iterations}}
+\item 
+int \mbox{\hyperlink{class_reco_digit_1_1_training_form_acfd44e33a888f9fbd6e0d3a5f43b8797}{first\+Hidden\+Layer}}
+\item 
+bool \mbox{\hyperlink{class_reco_digit_1_1_training_form_a858a899247ae8386d2b0aba97d34124c}{auto\+Load}}
+\item 
+\mbox{\hyperlink{class_reco_digit_1_1_neural_network}{Neural\+Network}} \mbox{\hyperlink{class_reco_digit_1_1_training_form_ab1faac03b9d5ade19e390e5361cf16fb}{trained\+Network}}
+\item 
+double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_reco_digit_1_1_training_form_afe942bc223718df044af4d320b100d80}{x\+Train}}
+\item 
+double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_reco_digit_1_1_training_form_a5141404e50541e09ef4ac576803df5f8}{y\+Train}}
+\item 
+System.\+Component\+Model.\+IContainer \mbox{\hyperlink{class_reco_digit_1_1_training_form_a6464842be5c6fa63528a6c4c6f584df5}{components}} = null
+\begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\item 
+System.\+Windows.\+Forms.\+Group\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_abdc9deac92e01033d5599e17ed8e7573}{learning\+Parameters\+Group\+Box}}
+\item 
+System.\+Windows.\+Forms.\+Text\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_a7f6219202161783edd2f3d02bcea44ef}{learning\+Dataset\+Path\+Text\+Box}}
+\item 
+System.\+Windows.\+Forms.\+Label \mbox{\hyperlink{class_reco_digit_1_1_training_form_a1dca7770fd791a789c87fecf325a5269}{learning\+Dataset\+Path\+Label}}
+\item 
+System.\+Windows.\+Forms.\+Button \mbox{\hyperlink{class_reco_digit_1_1_training_form_a71d9ec7ceb027725a4c7927023fe3aa0}{learning\+Dataset\+Path\+Button}}
+\item 
+System.\+Windows.\+Forms.\+Label \mbox{\hyperlink{class_reco_digit_1_1_training_form_aa09293e87c43e1f28ed0e1091f570315}{label1}}
+\item 
+System.\+Windows.\+Forms.\+Label \mbox{\hyperlink{class_reco_digit_1_1_training_form_a86291ca7318f1342e0c2d95e1bd92093}{sample\+Count\+Label}}
+\item 
+System.\+Windows.\+Forms.\+Text\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_a7573f8630c420e8fb790cbc605c444df}{iterations\+Count\+Text\+Box}}
+\item 
+System.\+Windows.\+Forms.\+Text\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_aebc2cb94f9b30dc0916273fa61cebc56}{sample\+Count\+Text\+Box}}
+\item 
+System.\+Windows.\+Forms.\+Label \mbox{\hyperlink{class_reco_digit_1_1_training_form_ae0c4e526e132e46e0bf116dece12bda2}{output\+Model\+Path\+Label}}
+\item 
+System.\+Windows.\+Forms.\+Button \mbox{\hyperlink{class_reco_digit_1_1_training_form_a8afcbdebd1cba52189ffcee990a8e227}{output\+Model\+Path\+Button}}
+\item 
+System.\+Windows.\+Forms.\+Text\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_a3d5f845b97148a353e0d58e992fff68d}{output\+Model\+Path\+Text\+Box}}
+\item 
+System.\+Windows.\+Forms.\+Check\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_a9fae56279de1b2f04a7dcc971d257579}{auto\+Load\+Checkbox}}
+\item 
+System.\+Windows.\+Forms.\+Button \mbox{\hyperlink{class_reco_digit_1_1_training_form_aae9cde2eff8fb506ca3fb528a01dab06}{train\+Button}}
+\item 
+System.\+Windows.\+Forms.\+Group\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_acf589eab5b78800ebcf922ecb1a9269c}{output\+Log\+Group\+Box}}
+\item 
+System.\+Windows.\+Forms.\+Text\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_a2a34cabf516aac29e941d72baf7d41c2}{output\+Log\+Text\+Box}}
+\item 
+System.\+Windows.\+Forms.\+Label \mbox{\hyperlink{class_reco_digit_1_1_training_form_a7b81fe679b4c0b83e3e63d057fa82178}{learning\+Rate\+Label}}
+\item 
+System.\+Windows.\+Forms.\+Text\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_af588dd16dfa943bd0741be19be84b1cb}{learning\+Rate\+Text\+Box}}
+\item 
+System.\+Windows.\+Forms.\+Progress\+Bar \mbox{\hyperlink{class_reco_digit_1_1_training_form_ad018baf6960edd3217abb5612f2c418f}{training\+Progress\+Bar}}
+\item 
+System.\+Windows.\+Forms.\+Label \mbox{\hyperlink{class_reco_digit_1_1_training_form_ac82443c7dc728417e93966adae45d1b6}{first\+Hidden\+Size\+Label}}
+\item 
+System.\+Windows.\+Forms.\+Text\+Box \mbox{\hyperlink{class_reco_digit_1_1_training_form_a1cd446228c77ed000659917f028bcb72}{fiest\+Hidden\+Size\+Text\+Box}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_reco_digit_1_1_training_form_a4bc377c3ae752930256f2449f849a3e6}\label{class_reco_digit_1_1_training_form_a4bc377c3ae752930256f2449f849a3e6} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!TrainingForm@{TrainingForm}}
+\index{TrainingForm@{TrainingForm}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{TrainingForm()}{TrainingForm()}}
+{\footnotesize\ttfamily Reco\+Digit.\+Training\+Form.\+Training\+Form (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reco_digit_1_1_main_form}{Main\+Form}}}]{main\+Form }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_reco_digit_1_1_training_form_a8aab582b837986b4808a87ab4893c1be}\label{class_reco_digit_1_1_training_form_a8aab582b837986b4808a87ab4893c1be} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily override void Reco\+Digit.\+Training\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ae75cec26b1a5a7f5fb93af91d270b0eb}\label{class_reco_digit_1_1_training_form_ae75cec26b1a5a7f5fb93af91d270b0eb} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!GetData@{GetData}}
+\index{GetData@{GetData}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{GetData()}{GetData()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Training\+Form.\+Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00100}{100}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a5115915d69e4ee27a78480cd8ea94b37}\label{class_reco_digit_1_1_training_form_a5115915d69e4ee27a78480cd8ea94b37} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Training\+Form.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Required method for Designer support -\/ do not modify the contents of this method with the code editor. 
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a98b366da4e1b4e1cf35a8f4cf953c0d1}\label{class_reco_digit_1_1_training_form_a98b366da4e1b4e1cf35a8f4cf953c0d1} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!learningDatasetPathButton\_Click@{learningDatasetPathButton\_Click}}
+\index{learningDatasetPathButton\_Click@{learningDatasetPathButton\_Click}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{learningDatasetPathButton\_Click()}{learningDatasetPathButton\_Click()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Training\+Form.\+learning\+Dataset\+Path\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a7f4453fd845c8425ca92a3072578a064}\label{class_reco_digit_1_1_training_form_a7f4453fd845c8425ca92a3072578a064} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!LoadTrainingData@{LoadTrainingData}}
+\index{LoadTrainingData@{LoadTrainingData}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{LoadTrainingData()}{LoadTrainingData()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Training\+Form.\+Load\+Training\+Data (\begin{DoxyParamCaption}\item[{int}]{training\+Batch\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00138}{138}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a29695860c80a335b652e64ad5daf18c2}\label{class_reco_digit_1_1_training_form_a29695860c80a335b652e64ad5daf18c2} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!outputModelPathButton\_Click@{outputModelPathButton\_Click}}
+\index{outputModelPathButton\_Click@{outputModelPathButton\_Click}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{outputModelPathButton\_Click()}{outputModelPathButton\_Click()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Training\+Form.\+output\+Model\+Path\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00072}{72}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a35969ec4016b81eb99301d5e8412544c}\label{class_reco_digit_1_1_training_form_a35969ec4016b81eb99301d5e8412544c} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!trainButton\_Click@{trainButton\_Click}}
+\index{trainButton\_Click@{trainButton\_Click}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{trainButton\_Click()}{trainButton\_Click()}}
+{\footnotesize\ttfamily async void Reco\+Digit.\+Training\+Form.\+train\+Button\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00179}{179}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ad3ec22c72160e5b63bed5ea7f00008f5}\label{class_reco_digit_1_1_training_form_ad3ec22c72160e5b63bed5ea7f00008f5} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!UpdateLog@{UpdateLog}}
+\index{UpdateLog@{UpdateLog}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{UpdateLog()}{UpdateLog()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Training\+Form.\+Update\+Log (\begin{DoxyParamCaption}\item[{string}]{message,  }\item[{bool}]{clear = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ac978bab79bd8635309b2cbcba21e3c77}\label{class_reco_digit_1_1_training_form_ac978bab79bd8635309b2cbcba21e3c77} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!UpdateLogThread@{UpdateLogThread}}
+\index{UpdateLogThread@{UpdateLogThread}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{UpdateLogThread()}{UpdateLogThread()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Training\+Form.\+Update\+Log\+Thread (\begin{DoxyParamCaption}\item[{string}]{message,  }\item[{bool}]{clear = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a2ce95a45dd563c4219d696aea3109bee}\label{class_reco_digit_1_1_training_form_a2ce95a45dd563c4219d696aea3109bee} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!UpdateProgressBarThread@{UpdateProgressBarThread}}
+\index{UpdateProgressBarThread@{UpdateProgressBarThread}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{UpdateProgressBarThread()}{UpdateProgressBarThread()}}
+{\footnotesize\ttfamily void Reco\+Digit.\+Training\+Form.\+Update\+Progress\+Bar\+Thread (\begin{DoxyParamCaption}\item[{int}]{curr\+Iter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_reco_digit_1_1_training_form_a858a899247ae8386d2b0aba97d34124c}\label{class_reco_digit_1_1_training_form_a858a899247ae8386d2b0aba97d34124c} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!autoLoad@{autoLoad}}
+\index{autoLoad@{autoLoad}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{autoLoad}{autoLoad}}
+{\footnotesize\ttfamily bool Reco\+Digit.\+Training\+Form.\+auto\+Load\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a9fae56279de1b2f04a7dcc971d257579}\label{class_reco_digit_1_1_training_form_a9fae56279de1b2f04a7dcc971d257579} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!autoLoadCheckbox@{autoLoadCheckbox}}
+\index{autoLoadCheckbox@{autoLoadCheckbox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{autoLoadCheckbox}{autoLoadCheckbox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Check\+Box Reco\+Digit.\+Training\+Form.\+auto\+Load\+Checkbox\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00294}{294}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a6464842be5c6fa63528a6c4c6f584df5}\label{class_reco_digit_1_1_training_form_a6464842be5c6fa63528a6c4c6f584df5} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!components@{components}}
+\index{components@{components}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily System.\+Component\+Model.\+IContainer Reco\+Digit.\+Training\+Form.\+components = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Required designer variable. 
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ac6dc8881de4f25fe59fc4f3c961681ea}\label{class_reco_digit_1_1_training_form_ac6dc8881de4f25fe59fc4f3c961681ea} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!datasetPath@{datasetPath}}
+\index{datasetPath@{datasetPath}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{datasetPath}{datasetPath}}
+{\footnotesize\ttfamily string Reco\+Digit.\+Training\+Form.\+dataset\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a1cd446228c77ed000659917f028bcb72}\label{class_reco_digit_1_1_training_form_a1cd446228c77ed000659917f028bcb72} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!fiestHiddenSizeTextBox@{fiestHiddenSizeTextBox}}
+\index{fiestHiddenSizeTextBox@{fiestHiddenSizeTextBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{fiestHiddenSizeTextBox}{fiestHiddenSizeTextBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Text\+Box Reco\+Digit.\+Training\+Form.\+fiest\+Hidden\+Size\+Text\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00302}{302}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_acfd44e33a888f9fbd6e0d3a5f43b8797}\label{class_reco_digit_1_1_training_form_acfd44e33a888f9fbd6e0d3a5f43b8797} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!firstHiddenLayer@{firstHiddenLayer}}
+\index{firstHiddenLayer@{firstHiddenLayer}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{firstHiddenLayer}{firstHiddenLayer}}
+{\footnotesize\ttfamily int Reco\+Digit.\+Training\+Form.\+first\+Hidden\+Layer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ac82443c7dc728417e93966adae45d1b6}\label{class_reco_digit_1_1_training_form_ac82443c7dc728417e93966adae45d1b6} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!firstHiddenSizeLabel@{firstHiddenSizeLabel}}
+\index{firstHiddenSizeLabel@{firstHiddenSizeLabel}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{firstHiddenSizeLabel}{firstHiddenSizeLabel}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Label Reco\+Digit.\+Training\+Form.\+first\+Hidden\+Size\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00301}{301}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a234b43501382abcf3f844f79e7544a70}\label{class_reco_digit_1_1_training_form_a234b43501382abcf3f844f79e7544a70} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!iterations@{iterations}}
+\index{iterations@{iterations}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{iterations}{iterations}}
+{\footnotesize\ttfamily int Reco\+Digit.\+Training\+Form.\+iterations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a7573f8630c420e8fb790cbc605c444df}\label{class_reco_digit_1_1_training_form_a7573f8630c420e8fb790cbc605c444df} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!iterationsCountTextBox@{iterationsCountTextBox}}
+\index{iterationsCountTextBox@{iterationsCountTextBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{iterationsCountTextBox}{iterationsCountTextBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Text\+Box Reco\+Digit.\+Training\+Form.\+iterations\+Count\+Text\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00289}{289}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_aa09293e87c43e1f28ed0e1091f570315}\label{class_reco_digit_1_1_training_form_aa09293e87c43e1f28ed0e1091f570315} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!label1@{label1}}
+\index{label1@{label1}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{label1}{label1}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Label Reco\+Digit.\+Training\+Form.\+label1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00287}{287}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a71d9ec7ceb027725a4c7927023fe3aa0}\label{class_reco_digit_1_1_training_form_a71d9ec7ceb027725a4c7927023fe3aa0} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!learningDatasetPathButton@{learningDatasetPathButton}}
+\index{learningDatasetPathButton@{learningDatasetPathButton}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{learningDatasetPathButton}{learningDatasetPathButton}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Button Reco\+Digit.\+Training\+Form.\+learning\+Dataset\+Path\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00286}{286}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a1dca7770fd791a789c87fecf325a5269}\label{class_reco_digit_1_1_training_form_a1dca7770fd791a789c87fecf325a5269} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!learningDatasetPathLabel@{learningDatasetPathLabel}}
+\index{learningDatasetPathLabel@{learningDatasetPathLabel}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{learningDatasetPathLabel}{learningDatasetPathLabel}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Label Reco\+Digit.\+Training\+Form.\+learning\+Dataset\+Path\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00285}{285}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a7f6219202161783edd2f3d02bcea44ef}\label{class_reco_digit_1_1_training_form_a7f6219202161783edd2f3d02bcea44ef} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!learningDatasetPathTextBox@{learningDatasetPathTextBox}}
+\index{learningDatasetPathTextBox@{learningDatasetPathTextBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{learningDatasetPathTextBox}{learningDatasetPathTextBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Text\+Box Reco\+Digit.\+Training\+Form.\+learning\+Dataset\+Path\+Text\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00284}{284}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_abdc9deac92e01033d5599e17ed8e7573}\label{class_reco_digit_1_1_training_form_abdc9deac92e01033d5599e17ed8e7573} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!learningParametersGroupBox@{learningParametersGroupBox}}
+\index{learningParametersGroupBox@{learningParametersGroupBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{learningParametersGroupBox}{learningParametersGroupBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Group\+Box Reco\+Digit.\+Training\+Form.\+learning\+Parameters\+Group\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00283}{283}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a17702a149b9b34f38f2c894dfc16b05a}\label{class_reco_digit_1_1_training_form_a17702a149b9b34f38f2c894dfc16b05a} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!learningRate@{learningRate}}
+\index{learningRate@{learningRate}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{learningRate}{learningRate}}
+{\footnotesize\ttfamily double Reco\+Digit.\+Training\+Form.\+learning\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a7b81fe679b4c0b83e3e63d057fa82178}\label{class_reco_digit_1_1_training_form_a7b81fe679b4c0b83e3e63d057fa82178} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!learningRateLabel@{learningRateLabel}}
+\index{learningRateLabel@{learningRateLabel}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{learningRateLabel}{learningRateLabel}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Label Reco\+Digit.\+Training\+Form.\+learning\+Rate\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00298}{298}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_af588dd16dfa943bd0741be19be84b1cb}\label{class_reco_digit_1_1_training_form_af588dd16dfa943bd0741be19be84b1cb} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!learningRateTextBox@{learningRateTextBox}}
+\index{learningRateTextBox@{learningRateTextBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{learningRateTextBox}{learningRateTextBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Text\+Box Reco\+Digit.\+Training\+Form.\+learning\+Rate\+Text\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00299}{299}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_acf589eab5b78800ebcf922ecb1a9269c}\label{class_reco_digit_1_1_training_form_acf589eab5b78800ebcf922ecb1a9269c} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!outputLogGroupBox@{outputLogGroupBox}}
+\index{outputLogGroupBox@{outputLogGroupBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{outputLogGroupBox}{outputLogGroupBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Group\+Box Reco\+Digit.\+Training\+Form.\+output\+Log\+Group\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00296}{296}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a2a34cabf516aac29e941d72baf7d41c2}\label{class_reco_digit_1_1_training_form_a2a34cabf516aac29e941d72baf7d41c2} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!outputLogTextBox@{outputLogTextBox}}
+\index{outputLogTextBox@{outputLogTextBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{outputLogTextBox}{outputLogTextBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Text\+Box Reco\+Digit.\+Training\+Form.\+output\+Log\+Text\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00297}{297}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ad9780f27466ec4ca272dc41ae3264900}\label{class_reco_digit_1_1_training_form_ad9780f27466ec4ca272dc41ae3264900} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!outputModelPath@{outputModelPath}}
+\index{outputModelPath@{outputModelPath}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{outputModelPath}{outputModelPath}}
+{\footnotesize\ttfamily string Reco\+Digit.\+Training\+Form.\+output\+Model\+Path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a8afcbdebd1cba52189ffcee990a8e227}\label{class_reco_digit_1_1_training_form_a8afcbdebd1cba52189ffcee990a8e227} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!outputModelPathButton@{outputModelPathButton}}
+\index{outputModelPathButton@{outputModelPathButton}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{outputModelPathButton}{outputModelPathButton}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Button Reco\+Digit.\+Training\+Form.\+output\+Model\+Path\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00292}{292}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ae0c4e526e132e46e0bf116dece12bda2}\label{class_reco_digit_1_1_training_form_ae0c4e526e132e46e0bf116dece12bda2} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!outputModelPathLabel@{outputModelPathLabel}}
+\index{outputModelPathLabel@{outputModelPathLabel}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{outputModelPathLabel}{outputModelPathLabel}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Label Reco\+Digit.\+Training\+Form.\+output\+Model\+Path\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00291}{291}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a3d5f845b97148a353e0d58e992fff68d}\label{class_reco_digit_1_1_training_form_a3d5f845b97148a353e0d58e992fff68d} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!outputModelPathTextBox@{outputModelPathTextBox}}
+\index{outputModelPathTextBox@{outputModelPathTextBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{outputModelPathTextBox}{outputModelPathTextBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Text\+Box Reco\+Digit.\+Training\+Form.\+output\+Model\+Path\+Text\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00293}{293}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_adf0bab1972774a93024768c5cad688ed}\label{class_reco_digit_1_1_training_form_adf0bab1972774a93024768c5cad688ed} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!parent@{parent}}
+\index{parent@{parent}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_main_form}{Main\+Form}} Reco\+Digit.\+Training\+Form.\+parent\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a86291ca7318f1342e0c2d95e1bd92093}\label{class_reco_digit_1_1_training_form_a86291ca7318f1342e0c2d95e1bd92093} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!sampleCountLabel@{sampleCountLabel}}
+\index{sampleCountLabel@{sampleCountLabel}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{sampleCountLabel}{sampleCountLabel}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Label Reco\+Digit.\+Training\+Form.\+sample\+Count\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00288}{288}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_aebc2cb94f9b30dc0916273fa61cebc56}\label{class_reco_digit_1_1_training_form_aebc2cb94f9b30dc0916273fa61cebc56} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!sampleCountTextBox@{sampleCountTextBox}}
+\index{sampleCountTextBox@{sampleCountTextBox}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{sampleCountTextBox}{sampleCountTextBox}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Text\+Box Reco\+Digit.\+Training\+Form.\+sample\+Count\+Text\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00290}{290}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a748b579e2aa2152bbbf3169a81709c28}\label{class_reco_digit_1_1_training_form_a748b579e2aa2152bbbf3169a81709c28} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!samples@{samples}}
+\index{samples@{samples}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{samples}{samples}}
+{\footnotesize\ttfamily int Reco\+Digit.\+Training\+Form.\+samples\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_aae9cde2eff8fb506ca3fb528a01dab06}\label{class_reco_digit_1_1_training_form_aae9cde2eff8fb506ca3fb528a01dab06} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!trainButton@{trainButton}}
+\index{trainButton@{trainButton}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{trainButton}{trainButton}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Button Reco\+Digit.\+Training\+Form.\+train\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00295}{295}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ab1faac03b9d5ade19e390e5361cf16fb}\label{class_reco_digit_1_1_training_form_ab1faac03b9d5ade19e390e5361cf16fb} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!trainedNetwork@{trainedNetwork}}
+\index{trainedNetwork@{trainedNetwork}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{trainedNetwork}{trainedNetwork}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_reco_digit_1_1_neural_network}{Neural\+Network}} Reco\+Digit.\+Training\+Form.\+trained\+Network\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_ad018baf6960edd3217abb5612f2c418f}\label{class_reco_digit_1_1_training_form_ad018baf6960edd3217abb5612f2c418f} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!trainingProgressBar@{trainingProgressBar}}
+\index{trainingProgressBar@{trainingProgressBar}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{trainingProgressBar}{trainingProgressBar}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Progress\+Bar Reco\+Digit.\+Training\+Form.\+training\+Progress\+Bar\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8_designer_8cs_source_l00300}{300}} of file \mbox{\hyperlink{_training_form_8_designer_8cs_source}{Training\+Form.\+Designer.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_afe942bc223718df044af4d320b100d80}\label{class_reco_digit_1_1_training_form_afe942bc223718df044af4d320b100d80} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!xTrain@{xTrain}}
+\index{xTrain@{xTrain}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{xTrain}{xTrain}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Reco\+Digit.\+Training\+Form.\+x\+Train\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+\Hypertarget{class_reco_digit_1_1_training_form_a5141404e50541e09ef4ac576803df5f8}\label{class_reco_digit_1_1_training_form_a5141404e50541e09ef4ac576803df5f8} 
+\index{RecoDigit.TrainingForm@{RecoDigit.TrainingForm}!yTrain@{yTrain}}
+\index{yTrain@{yTrain}!RecoDigit.TrainingForm@{RecoDigit.TrainingForm}}
+\doxysubsubsection{\texorpdfstring{yTrain}{yTrain}}
+{\footnotesize\ttfamily double \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Reco\+Digit.\+Training\+Form.\+y\+Train\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_training_form_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_training_form_8cs_source}{Training\+Form.\+cs}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Reco\+Digit/\mbox{\hyperlink{_training_form_8cs}{Training\+Form.\+cs}}\item 
+Reco\+Digit/\mbox{\hyperlink{_training_form_8_designer_8cs}{Training\+Form.\+Designer.\+cs}}\end{DoxyCompactItemize}

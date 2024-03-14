@@ -32,12 +32,12 @@ namespace RecoDigit
             InitializeComponent();
             bitmap = new Bitmap(drawingPictureBox.Width, drawingPictureBox.Height);
             graphics = Graphics.FromImage(bitmap);
-            graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            //graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             graphics.Clear(Color.Black);
             drawingPictureBox.Image = bitmap;
 
             pen = new Pen(Color.White, initialPenSize);
-            pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Triangle;
+            pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Square;
 
             penSizeLabel.Text = initialPenSize.ToString();
 
@@ -127,7 +127,9 @@ namespace RecoDigit
             }
             else
             {
-                Bitmap resized = ImageUtilities.Resize(bitmap, outputImageSide, outputImageSide, System.Drawing.Drawing2D.InterpolationMode.Low);
+                Bitmap resized = ImageUtilities.Resize(bitmap, outputImageSide, outputImageSide, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor);
+                resized = ImageUtilities.Resize(bitmap, outputImageSide * 2, outputImageSide * 2, System.Drawing.Drawing2D.InterpolationMode.Bicubic);
+                resized = ImageUtilities.Resize(bitmap, outputImageSide, outputImageSide, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor);
                 byte[] bytes = ImageUtilities.BitmapToArray(resized);
                 double[] inputImage = bytes.Select((pixel) => ((double)pixel / 255.0)).ToArray();
 
@@ -195,7 +197,6 @@ namespace RecoDigit
         {
             DataGridViewRow selectedRow = drawingHistoryDataGrid.SelectedRows[0];
             Bitmap selectedBitmap = fullSizeBitmapHistory[selectedRow];
-            int size = drawingPictureBox.Size.Width;
             graphics.DrawImage(selectedBitmap, 0, 0);
             drawingPictureBox.Refresh();
         }

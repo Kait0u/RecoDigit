@@ -15,15 +15,17 @@ namespace RecoDigit
         private Matrix A1, A2;          // A1 - ReLU activation,    A2 - Sigmoid activation
         private Matrix B0, B1;          // B0 - input bias,         B1 - 1st hidden layer bias
 
+        int firstHiddenLayerSize;
         private double learningRate;    // Hyperparameter alpha
-
         private double trainingSetAccuracy = 0;
 
 
-        public NeuralNetwork(double learningRate = 0.15)
+
+        public NeuralNetwork(int firstHiddenLayerSize = 10, double learningRate = 0.15)
         {
-            Initialize(1);
+            this.firstHiddenLayerSize = firstHiddenLayerSize;
             this.learningRate = learningRate;
+            Initialize(1, this.firstHiddenLayerSize);
         }
 
         private NeuralNetwork(Matrix W0, Matrix W1, Matrix B0, Matrix B1, double learningRate = 0.15)
@@ -35,16 +37,16 @@ namespace RecoDigit
             this.learningRate = learningRate;
         }
 
-        void Initialize(int batchSize)
+        void Initialize(int batchSize, int firstHiddenSize)
         {
-            W0 = new Matrix(new double[10, 784], true);
-            W1 = new Matrix(new double[10, 10], true);
+            W0 = new Matrix(new double[firstHiddenSize, 784], true);
+            W1 = new Matrix(new double[10, firstHiddenSize], true);
             
             Z0 = new Matrix(new double[784, batchSize], true);
-            Z1 = new Matrix(new double[10], true);
+            Z1 = new Matrix(new double[firstHiddenSize], true);
             Z2 = new Matrix(new double[10, batchSize], true);
             
-            B0 = new Matrix(new double[10], true).Transpose();
+            B0 = new Matrix(new double[firstHiddenSize], true).Transpose();
             B1 = new Matrix(new double[10], true).Transpose();
         }
 
@@ -93,7 +95,7 @@ namespace RecoDigit
             bool debug = logCallback != null;
 
             int exampleCount = X.Length;
-            Initialize(exampleCount);
+            Initialize(exampleCount, firstHiddenLayerSize);
 
             if (Y.Length != exampleCount) throw new InvalidOperationException("X and Y have to be of the same size for the training to proceed!");
 
