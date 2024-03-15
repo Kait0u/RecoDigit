@@ -14,6 +14,7 @@ var searchData=
   ['predictiongroupbox_11',['predictionGroupBox',['../class_reco_digit_1_1_main_form.html#a8880b1f1131caba3c5774ff6d67f26cf',1,'RecoDigit::MainForm']]],
   ['predictiontextbox_12',['predictionTextBox',['../class_reco_digit_1_1_main_form.html#a2cf26fec38d0394d7ea679837561e164',1,'RecoDigit::MainForm']]],
   ['predictmultiple_13',['PredictMultiple',['../class_reco_digit_1_1_neural_network.html#a71ea0030e1af57efd2d711b1e072ab81',1,'RecoDigit::NeuralNetwork']]],
-  ['prevloc_14',['prevLoc',['../class_reco_digit_1_1_main_form.html#a306652256908c01a077b05c2c2bafc3c',1,'RecoDigit::MainForm']]],
-  ['program_2ecs_15',['Program.cs',['../_program_8cs.html',1,'']]]
+  ['preexittoolstripseparator_14',['preExitToolStripSeparator',['../class_reco_digit_1_1_main_form.html#a2cefc7cd6a778b97b8f5a071e4275710',1,'RecoDigit::MainForm']]],
+  ['prevloc_15',['prevLoc',['../class_reco_digit_1_1_main_form.html#a306652256908c01a077b05c2c2bafc3c',1,'RecoDigit::MainForm']]],
+  ['program_2ecs_16',['Program.cs',['../_program_8cs.html',1,'']]]
 ];

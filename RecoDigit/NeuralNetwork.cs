@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 
@@ -302,7 +300,7 @@ namespace RecoDigit
             exports.Add("W1", W1.ExportToString());
             exports.Add("B0", B0.ExportToString());
             exports.Add("B1", B1.ExportToString());
-            exports.Add("ALPHA", $"{learningRate}".Replace(',', '.'));
+            exports.Add("ALPHA", $"{learningRate}".Replace(',', '.')); // Replace commas with dots to prevent issues with Polish locales.
 
             using (FileStream fileToOpen = new FileStream(path, FileMode.Create))
             {
@@ -350,10 +348,12 @@ namespace RecoDigit
                             
                             if (entryFile.Name == "ALPHA")
                             {
+                                // Replace commas with dots to prevent issues with Polish locales.
                                 entries["ALPHA"] = Double.Parse(data.Replace(',', '.'));
                             }
                             else
                             {
+                                // Replace commas with dots to prevent issues with Polish locales.
                                 entries[entryFile.Name] = Matrix.Parse(data.Replace(',', '.'));
                             }
                         }

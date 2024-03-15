@@ -9,5 +9,6 @@ var searchData=
   ['prediction_6',['Prediction',['../class_reco_digit_1_1_main_form.html#a5e77f6588cb58ddad33c442fa4257810',1,'RecoDigit::MainForm']]],
   ['predictiongroupbox_7',['predictionGroupBox',['../class_reco_digit_1_1_main_form.html#a8880b1f1131caba3c5774ff6d67f26cf',1,'RecoDigit::MainForm']]],
   ['predictiontextbox_8',['predictionTextBox',['../class_reco_digit_1_1_main_form.html#a2cf26fec38d0394d7ea679837561e164',1,'RecoDigit::MainForm']]],
-  ['prevloc_9',['prevLoc',['../class_reco_digit_1_1_main_form.html#a306652256908c01a077b05c2c2bafc3c',1,'RecoDigit::MainForm']]]
+  ['preexittoolstripseparator_9',['preExitToolStripSeparator',['../class_reco_digit_1_1_main_form.html#a2cefc7cd6a778b97b8f5a071e4275710',1,'RecoDigit::MainForm']]],
+  ['prevloc_10',['prevLoc',['../class_reco_digit_1_1_main_form.html#a306652256908c01a077b05c2c2bafc3c',1,'RecoDigit::MainForm']]]
 ];

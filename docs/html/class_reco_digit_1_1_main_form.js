@@ -52,9 +52,9 @@ var class_reco_digit_1_1_main_form =
     [ "Prediction", "class_reco_digit_1_1_main_form.html#a5e77f6588cb58ddad33c442fa4257810", null ],
     [ "predictionGroupBox", "class_reco_digit_1_1_main_form.html#a8880b1f1131caba3c5774ff6d67f26cf", null ],
     [ "predictionTextBox", "class_reco_digit_1_1_main_form.html#a2cf26fec38d0394d7ea679837561e164", null ],
+    [ "preExitToolStripSeparator", "class_reco_digit_1_1_main_form.html#a2cefc7cd6a778b97b8f5a071e4275710", null ],
     [ "prevLoc", "class_reco_digit_1_1_main_form.html#a306652256908c01a077b05c2c2bafc3c", null ],
     [ "recognizeButton", "class_reco_digit_1_1_main_form.html#a2b6d90e27a2736bc5c2cfd937f57b6ad", null ],
-    [ "toolStripSeparator1", "class_reco_digit_1_1_main_form.html#a6e96bbb21fd91d3e601e3c8e114cda6d", null ],
     [ "trainToolStripMenuItem", "class_reco_digit_1_1_main_form.html#aaa2f9c030f85acb20345aede832c740d", null ],
     [ "Network", "class_reco_digit_1_1_main_form.html#ae1d14d40aad0bdac6c63aa757749ff65", null ]
 ];

@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RecoDigit
@@ -213,11 +210,9 @@ namespace RecoDigit
             }
             else
             {
-                Bitmap resized = ImageUtilities.Resize(bitmap, outputImageSize, outputImageSize, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor);
-                resized = ImageUtilities.Resize(bitmap, outputImageSize * 2, outputImageSize * 2, System.Drawing.Drawing2D.InterpolationMode.Bicubic);
-                resized = ImageUtilities.Resize(bitmap, outputImageSize, outputImageSize, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor);
+                Bitmap resized = ImageUtilities.Resize(bitmap, outputImageSize, outputImageSize);
                 byte[] bytes = ImageUtilities.BitmapToArray(resized);
-                double[] inputImage = bytes.Select((pixel) => ((double)pixel / 255.0)).ToArray();
+                double[] inputImage = bytes.Select(pixel => pixel / 255.0).ToArray();
 
                 double[] result = neuralNetwork.Predict(inputImage);
                 int prediction = Utilities.ArgMax(result);
@@ -256,7 +251,7 @@ namespace RecoDigit
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
                 Title = "Locate your neural network",
-                InitialDirectory = "./models",
+                InitialDirectory = Path.Combine(Application.StartupPath, "models"), 
                 Filter = "Neural Network file (*.neuro)|*.neuro"
             };
 

@@ -32,7 +32,7 @@
             networkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             trainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            preExitToolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             mainMenuStrip = new System.Windows.Forms.MenuStrip();
             aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +67,7 @@
             // 
             // networkToolStripMenuItem
             // 
-            networkToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { trainToolStripMenuItem, loadToolStripMenuItem, toolStripSeparator1, exitToolStripMenuItem });
+            networkToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { trainToolStripMenuItem, loadToolStripMenuItem, preExitToolStripSeparator, exitToolStripMenuItem });
             networkToolStripMenuItem.Name = "networkToolStripMenuItem";
             networkToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             networkToolStripMenuItem.Text = "Network";
@@ -75,26 +75,26 @@
             // trainToolStripMenuItem
             // 
             trainToolStripMenuItem.Name = "trainToolStripMenuItem";
-            trainToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            trainToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             trainToolStripMenuItem.Text = "Train";
             trainToolStripMenuItem.Click += trainToolStripMenuItem_Click;
             // 
             // loadToolStripMenuItem
             // 
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             loadToolStripMenuItem.Text = "Load";
             loadToolStripMenuItem.Click += loadToolStripMenuItem_Click;
             // 
-            // toolStripSeparator1
+            // preExitToolStripSeparator
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new System.Drawing.Size(97, 6);
+            preExitToolStripSeparator.Name = "preExitToolStripSeparator";
+            preExitToolStripSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -396,7 +396,7 @@
         private System.Windows.Forms.ToolStripMenuItem networkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trainToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator preExitToolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.MenuStrip mainMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;

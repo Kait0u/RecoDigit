@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RecoDigit
@@ -519,6 +515,7 @@ namespace RecoDigit
                 string line = "";
                 for (int c = 0; c < cols; ++c)
                 {
+                    // Replace commas with dots to prevent issues with Polish locales.
                     line += $"{matrix[r, c]} ".Replace(',', '.');
                 }
                 line.Remove(cols - 1);
@@ -556,7 +553,8 @@ namespace RecoDigit
 
                 for (int c = 0; c < cols; ++c)
                 {
-                    result[r, c] = double.Parse(columns[c].Replace(',', '.'));
+                    // Replace commas with dots to prevent issues with Polish locales.
+                    result[r, c] = double.Parse(columns[c].Replace(',', '.')); 
                 }
             }
 

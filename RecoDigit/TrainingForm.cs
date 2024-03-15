@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,58 +16,62 @@ namespace RecoDigit
         /// <summary>
         /// Reference to the main window for <see cref="NeuralNetwork"/> transferring purposes.
         /// </summary>
-        MainForm parent;
+        private MainForm parent;
 
         /// <summary>
         /// Path to the CSV dataset.
         /// </summary>
-        string datasetPath;
-        
+        private string datasetPath;
+
         /// <summary>
         /// Path to output the model after training.
         /// </summary>
-        string outputModelPath;
+        private string outputModelPath;
 
         /// <summary>
         /// The rate at which the network adjusts its values.
         /// </summary>
-        double learningRate;
+        private double learningRate;
 
         /// <summary>
         /// How many samples should be taken from the dataset.
         /// </summary>
-        int samples;
+        private int samples;
 
         /// <summary>
         /// For how many iterations the training should go on.
         /// </summary>
-        int iterations; 
+        private int iterations;
 
         /// <summary>
         /// How many neurons the first hidden layer should have.
         /// </summary>
-        int firstHiddenLayer;
+        private int firstHiddenLayer;
 
         /// <summary>
         /// Whether the newly trained network should replace the old one without asking for confirmation.
         /// </summary>
-        bool autoLoad;
+        private bool autoLoad;
 
         /// <summary>
         /// A newly trained network.
         /// </summary>
-        NeuralNetwork trainedNetwork;
+        private NeuralNetwork trainedNetwork;
 
         /// <summary>
         /// A 2D array of training examples, where each column is an input vector.
         /// </summary>
-        double[][] xTrain;
+        private double[][] xTrain;
 
         /// <summary>
         /// A 2D array of training outcomes, where each column is a One-Hot encoded label.
         /// </summary>
-        double[][] yTrain;
+        private double[][] yTrain;
 
+        /// <summary>
+        /// Specifies whether the form is currently performing a training sequence (<c>true</c>) or not (<c>false</c>).
+        /// </summary>
+        private bool trainingInProgress = false;
 
         /// <summary>
         /// Constructor taking a reference to the main window that will be needed to send the trained network to.
@@ -121,14 +120,15 @@ namespace RecoDigit
         /// </summary>
         private void learningDatasetPathButton_Click(object sender, EventArgs e)
         {
-            string path = Path.Exists(learningDatasetPathTextBox.Text) ?
-                learningDatasetPathTextBox.Text :
+
+            string path = Path.Exists(Path.GetDirectoryName(learningDatasetPathTextBox.Text)) ?
+                Path.GetDirectoryName(learningDatasetPathTextBox.Text) :
                 Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             OpenFileDialog openFileDialog = new OpenFileDialog()
             {
                 Title = "Navigate to your CSV dataset",
-                InitialDirectory = Path.GetDirectoryName(path),
+                InitialDirectory = path,
                 Filter = "CSV files (*.CSV)|*.CSV"
             };
 
@@ -143,8 +143,8 @@ namespace RecoDigit
         /// </summary>
         private void outputModelPathButton_Click(object sender, EventArgs e)
         {
-            string path = Path.Exists(learningDatasetPathTextBox.Text) ?
-                learningDatasetPathTextBox.Text :
+            string path = Path.Exists(Path.GetDirectoryName(outputModelPathTextBox.Text)) ?
+                Path.GetDirectoryName(outputModelPathTextBox.Text) :
                 Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             string name = "EXPORT";
@@ -155,7 +155,7 @@ namespace RecoDigit
             SaveFileDialog saveFileDialog = new SaveFileDialog()
             {
                 Title = "Navigate where you'd like to save your NN model",
-                InitialDirectory = Path.GetDirectoryName(path),
+                InitialDirectory = path,
                 Filter = "Neural Network file (*.neuro)|*.neuro",
                 OverwritePrompt = true,
                 FileName = name,
@@ -263,6 +263,7 @@ namespace RecoDigit
         private async void trainButton_Click(object sender, EventArgs e)
         {
             outputLogTextBox.Clear();
+            trainingInProgress = true;
             trainButton.Enabled = false;
             trainingProgressBar.Value = 0;
 
@@ -282,12 +283,14 @@ namespace RecoDigit
                 trainedNetwork = new NeuralNetwork(firstHiddenLayer, learningRate);
                 await Task.Run(() => trainedNetwork.Train(xTrain, yTrain, iterations, trainingLogCallback));
                 trainedNetwork.ExportToFile(outputModelPath);
-                
+
             }
             catch (Exception ex)
             {
                 UpdateLog(ex.Message);
+                trainingInProgress = false;
                 trainButton.Enabled = true;
+
                 return;
             }
 
@@ -299,7 +302,10 @@ namespace RecoDigit
             if (!load)
             {
                 load = DialogResult.Yes == MessageBox.Show(
-                    "Training complete! Would you like to load your network into the program?", "Training complete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    "Training complete! Would you like to load your network into the program?",
+                    "Training complete!",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
             }
 
             if (load)
@@ -307,6 +313,18 @@ namespace RecoDigit
                 parent.Network = trainedNetwork;
                 parent.UpdateLog("Trained network loaded.", true);
                 Close();
+            }
+        }
+
+        /// <summary>
+        /// If there is training in progress, prevents the user from quitting.
+        /// </summary>
+        private void TrainingForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (trainingInProgress)
+            {
+                MessageBox.Show("Cannot quit - there is a training process going on!", "Can't quit!", MessageBoxButtons.OK);
+                e.Cancel = true;
             }
         }
     }

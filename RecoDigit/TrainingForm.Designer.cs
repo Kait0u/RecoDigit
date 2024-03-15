@@ -270,6 +270,7 @@
             ShowIcon = false;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "RecoDigit: Training Form";
+            FormClosing += TrainingForm_FormClosing;
             learningParametersGroupBox.ResumeLayout(false);
             learningParametersGroupBox.PerformLayout();
             outputLogGroupBox.ResumeLayout(false);

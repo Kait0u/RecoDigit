@@ -8,6 +8,7 @@ var class_reco_digit_1_1_training_form =
     [ "LoadTrainingData", "class_reco_digit_1_1_training_form.html#a7f4453fd845c8425ca92a3072578a064", null ],
     [ "outputModelPathButton_Click", "class_reco_digit_1_1_training_form.html#a29695860c80a335b652e64ad5daf18c2", null ],
     [ "trainButton_Click", "class_reco_digit_1_1_training_form.html#a35969ec4016b81eb99301d5e8412544c", null ],
+    [ "TrainingForm_FormClosing", "class_reco_digit_1_1_training_form.html#ada55ed54f0c99bf775bc55121b972349", null ],
     [ "UpdateLog", "class_reco_digit_1_1_training_form.html#ad3ec22c72160e5b63bed5ea7f00008f5", null ],
     [ "UpdateLogThread", "class_reco_digit_1_1_training_form.html#ac978bab79bd8635309b2cbcba21e3c77", null ],
     [ "UpdateProgressBarThread", "class_reco_digit_1_1_training_form.html#a2ce95a45dd563c4219d696aea3109bee", null ],
@@ -40,6 +41,7 @@ var class_reco_digit_1_1_training_form =
     [ "samples", "class_reco_digit_1_1_training_form.html#a748b579e2aa2152bbbf3169a81709c28", null ],
     [ "trainButton", "class_reco_digit_1_1_training_form.html#aae9cde2eff8fb506ca3fb528a01dab06", null ],
     [ "trainedNetwork", "class_reco_digit_1_1_training_form.html#ab1faac03b9d5ade19e390e5361cf16fb", null ],
+    [ "trainingInProgress", "class_reco_digit_1_1_training_form.html#a558433595c6a807d36f3a39396d8d69f", null ],
     [ "trainingProgressBar", "class_reco_digit_1_1_training_form.html#ad018baf6960edd3217abb5612f2c418f", null ],
     [ "xTrain", "class_reco_digit_1_1_training_form.html#afe942bc223718df044af4d320b100d80", null ],
     [ "yTrain", "class_reco_digit_1_1_training_form.html#a5141404e50541e09ef4ac576803df5f8", null ]
