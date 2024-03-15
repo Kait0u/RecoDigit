@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Threading.Tasks;
 
 namespace RecoDigit
@@ -515,8 +516,9 @@ namespace RecoDigit
                 string line = "";
                 for (int c = 0; c < cols; ++c)
                 {
-                    // Replace commas with dots to prevent issues with Polish locales.
-                    line += $"{matrix[r, c]} ".Replace(',', '.');
+                    // Use the Invariant Culture for parsing doubles
+                    // to prevent comma instead of dot and dot instead of comma errors
+                    line += matrix[r, c].ToString(CultureInfo.InvariantCulture) + " ";
                 }
                 line.Remove(cols - 1);
                 line += Environment.NewLine;
@@ -553,8 +555,9 @@ namespace RecoDigit
 
                 for (int c = 0; c < cols; ++c)
                 {
-                    // Replace commas with dots to prevent issues with Polish locales.
-                    result[r, c] = double.Parse(columns[c].Replace(',', '.')); 
+                    // Use the Invariant Culture for parsing doubles
+                    // to prevent comma instead of dot and dot instead of comma errors
+                    result[r, c] = double.Parse(columns[c], CultureInfo.InvariantCulture); 
                 }
             }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -175,7 +176,7 @@ namespace RecoDigit
         /// <exception cref="InvalidDataException">Invalid data in at least one field.</exception>
         private void GetData()
         {
-            if (!Double.TryParse(learningRateTextBox.Text, out learningRate))
+            if (!double.TryParse(learningRateTextBox.Text, CultureInfo.InvariantCulture, out learningRate))
                 throw new InvalidDataException("Error parsing provided Learning Rate!");
 
             if (learningRate <= 0 || learningRate >= 1.0)
@@ -290,7 +291,6 @@ namespace RecoDigit
                 UpdateLog(ex.Message);
                 trainingInProgress = false;
                 trainButton.Enabled = true;
-
                 return;
             }
 
@@ -298,6 +298,9 @@ namespace RecoDigit
             UpdateLog("Training complete! You may close this window now.");
 
             bool load = autoLoad;
+
+            trainingInProgress = false;
+            trainButton.Enabled = true;
 
             if (!load)
             {

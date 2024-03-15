@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Threading.Tasks;
@@ -211,11 +212,11 @@ namespace RecoDigit
                 }
 
                 trainingSetAccuracy = (double)successes / exampleCount;
-                if (debug && iterIdx % 10 == 0) logCallback(string.Format("[ITERATION {0,6}]: ACCURACY = {1,6:F3}", iterIdx, trainingSetAccuracy), iterIdx + 1);
+                if (debug && iterIdx % 10 == 0) logCallback(string.Format("[ITERATION {0,6}]: {1}", iterIdx, trainingSetAccuracy.ToString(CultureInfo.InvariantCulture)), iterIdx + 1);
                 else if (debug) logCallback(null, iterIdx + 1);
             }
 
-            if (debug) logCallback(string.Format("[FINAL RESULT]: ACCURACY = {0,6:F3}", trainingSetAccuracy), iterations);
+            if (debug) logCallback("[FINAL RESULT]: ACCURACY = " + trainingSetAccuracy.ToString(CultureInfo.InvariantCulture), iterations);
         }
 
         /// <summary>
@@ -300,7 +301,10 @@ namespace RecoDigit
             exports.Add("W1", W1.ExportToString());
             exports.Add("B0", B0.ExportToString());
             exports.Add("B1", B1.ExportToString());
-            exports.Add("ALPHA", $"{learningRate}".Replace(',', '.')); // Replace commas with dots to prevent issues with Polish locales.
+
+            // Use the Invariant Culture for parsing doubles
+            // to prevent comma instead of dot and dot instead of comma errors
+            exports.Add("ALPHA", learningRate.ToString(CultureInfo.InvariantCulture)); 
 
             using (FileStream fileToOpen = new FileStream(path, FileMode.Create))
             {
@@ -348,13 +352,15 @@ namespace RecoDigit
                             
                             if (entryFile.Name == "ALPHA")
                             {
-                                // Replace commas with dots to prevent issues with Polish locales.
-                                entries["ALPHA"] = Double.Parse(data.Replace(',', '.'));
+                                // Use the Invariant Culture for parsing doubles
+                                // to prevent comma instead of dot and dot instead of comma errors
+                                entries["ALPHA"] = double.Parse(data, CultureInfo.InvariantCulture);
                             }
                             else
                             {
-                                // Replace commas with dots to prevent issues with Polish locales.
-                                entries[entryFile.Name] = Matrix.Parse(data.Replace(',', '.'));
+                                // Use the Invariant Culture for parsing doubles
+                                // to prevent comma instead of dot and dot instead of comma errors
+                                entries[entryFile.Name] = Matrix.Parse(data);
                             }
                         }
                     }
